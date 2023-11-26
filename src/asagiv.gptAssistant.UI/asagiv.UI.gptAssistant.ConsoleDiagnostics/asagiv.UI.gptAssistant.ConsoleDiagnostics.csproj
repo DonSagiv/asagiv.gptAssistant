@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <UserSecretsId>566456c9-fe9e-439e-95e0-ed7e498087eb</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\asagiv.common\src\asagiv.domain\asagiv.domain.core\asagiv.domain.core.csproj" />
+    <ProjectReference Include="..\..\asagiv.gptAssistant.Application\asagiv.Application.gptAssistant\asagiv.Application.gptAssistant.csproj" />
+    <ProjectReference Include="..\..\asagiv.gptAssistant.Domain\asagiv.Domain.gptAssistant\asagiv.Domain.gptAssistant.csproj" />
+    <ProjectReference Include="..\..\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.Serializatrion\asagiv.Infrastructure.gptAssistant.Serializatrion.csproj" />
+    <ProjectReference Include="..\..\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.Web\asagiv.Infrastructure.gptAssistant.Web.csproj" />
+  </ItemGroup>
+
+</Project>

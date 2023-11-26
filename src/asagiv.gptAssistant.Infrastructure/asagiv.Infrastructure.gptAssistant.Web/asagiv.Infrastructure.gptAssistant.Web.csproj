@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
+    <PackageReference Include="System.Linq.Async" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\asagiv.gptAssistant.Application\asagiv.Application.gptAssistant\asagiv.Application.gptAssistant.csproj" />
+    <ProjectReference Include="..\..\asagiv.gptAssistant.Domain\asagiv.Domain.gptAssistant\asagiv.Domain.gptAssistant.csproj" />
+    <ProjectReference Include="..\src\asagiv.gptAssistant.Application\asagiv.Application.gptAssistant\asagiv.Application.gptAssistant.csproj" />
+  </ItemGroup>
+
+</Project>
