@@ -22,22 +22,44 @@ namespace asagiv.UI.gptAssistant.ConsoleDiagnostics
                 ApiKey = GetApiKey()
             };
 
-            var request = builder.WithModel("gpt-4-1106-preview")
-                .WithSystemMessage("You are a C# tester that writes brief responses.")
-                .WithUserMessage("Write 3 seldom used words in the English language.")
-                .UseStream()
-                .Build();
+            Console.Write("What am I?: ");
 
-            var responseEnumerable = requestProcessor
-                .ProcessAsync(request, options)
-                .Where(x => x != null);
+            var systemMessage = Console.ReadLine();
 
-            await foreach (var item in responseEnumerable)
+            while (true)
             {
-                foreach (var choice in item.Choices)
+                Console.Write("What is your request?: ");
+
+                var userMessage = Console.ReadLine();
+
+                if(userMessage == "quit" || userMessage == "exit")
                 {
-                    Console.Write(choice.Payload.Content);
+                    break;
                 }
+
+                var request = builder.WithModel("gpt-4-1106-preview")
+                    .WithSystemMessage(systemMessage)
+                    .WithUserMessage(userMessage)
+                    .UseStream()
+                    .Build();
+
+                var responseEnumerable = requestProcessor
+                    .ProcessAsync(request, options)
+                    .Where(x => x != null);
+
+                Console.WriteLine();
+
+                await foreach (var item in responseEnumerable)
+                {
+                    foreach (var choice in item.Choices)
+                    {
+                        Thread.Sleep(100);
+
+                        Console.Write(choice.Payload.Content);
+                    }
+                }
+
+                Console.WriteLine();
             }
         }
 
