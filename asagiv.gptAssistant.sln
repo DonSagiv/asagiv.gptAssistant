@@ -27,9 +27,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{10EB2BE8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "asagiv.gptAssistant.Infrastructure.Tests", "asagiv.gptAssistant.Infrastructure.Tests", "{BEADB7AB-ADD6-4D57-B89B-F14090CD8630}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asagiv.Infrastructure.gptAssistant.Tests", "tests\asagiv.gptAssistant.Infrastructure.Tests\asagiv.Infrastructure.gptAssistant.Tests\asagiv.Infrastructure.gptAssistant.Tests.csproj", "{F5BA2EF0-6009-403B-AAF8-0AA97C716365}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.Infrastructure.gptAssistant.Tests", "tests\asagiv.gptAssistant.Infrastructure.Tests\asagiv.Infrastructure.gptAssistant.Tests\asagiv.Infrastructure.gptAssistant.Tests.csproj", "{F5BA2EF0-6009-403B-AAF8-0AA97C716365}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.Infrastructure.gptAssistant.Web", "src\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.Web\asagiv.Infrastructure.gptAssistant.Web.csproj", "{5BDBF132-88F5-48E3-AA1C-436BB363B90E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.UI.gptAssistant.Avalonia", "asagiv.UI.gptAssistant.Avalonia\asagiv.UI.gptAssistant.Avalonia.csproj", "{B764D0AC-D382-4B63-A578-08D9E64B73A4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.UI.gptAssistant.Avalonia.Android", "asagiv.UI.gptAssistant.Avalonia.Android\asagiv.UI.gptAssistant.Avalonia.Android.csproj", "{33B2E7D4-5506-4748-B509-E7AF447D45F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.UI.gptAssistant.Avalonia.Desktop", "asagiv.UI.gptAssistant.Avalonia.Desktop\asagiv.UI.gptAssistant.Avalonia.Desktop.csproj", "{2BDE267A-E135-4A91-85DE-5087A6C618A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.UI.gptAssistant.Avalonia.iOS", "asagiv.UI.gptAssistant.Avalonia.iOS\asagiv.UI.gptAssistant.Avalonia.iOS.csproj", "{CC6C738D-B06F-4432-B03D-706EDB12BB7D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.UI.gptAssistant.Avalonia.Browser", "asagiv.UI.gptAssistant.Avalonia.Browser\asagiv.UI.gptAssistant.Avalonia.Browser.csproj", "{F3EC4E86-AC37-4DB0-A43D-CC2572DA760F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +75,30 @@ Global
 		{5BDBF132-88F5-48E3-AA1C-436BB363B90E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BDBF132-88F5-48E3-AA1C-436BB363B90E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BDBF132-88F5-48E3-AA1C-436BB363B90E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B764D0AC-D382-4B63-A578-08D9E64B73A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B764D0AC-D382-4B63-A578-08D9E64B73A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B764D0AC-D382-4B63-A578-08D9E64B73A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B764D0AC-D382-4B63-A578-08D9E64B73A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33B2E7D4-5506-4748-B509-E7AF447D45F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33B2E7D4-5506-4748-B509-E7AF447D45F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33B2E7D4-5506-4748-B509-E7AF447D45F0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{33B2E7D4-5506-4748-B509-E7AF447D45F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33B2E7D4-5506-4748-B509-E7AF447D45F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33B2E7D4-5506-4748-B509-E7AF447D45F0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2BDE267A-E135-4A91-85DE-5087A6C618A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BDE267A-E135-4A91-85DE-5087A6C618A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BDE267A-E135-4A91-85DE-5087A6C618A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BDE267A-E135-4A91-85DE-5087A6C618A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC6C738D-B06F-4432-B03D-706EDB12BB7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC6C738D-B06F-4432-B03D-706EDB12BB7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC6C738D-B06F-4432-B03D-706EDB12BB7D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CC6C738D-B06F-4432-B03D-706EDB12BB7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC6C738D-B06F-4432-B03D-706EDB12BB7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC6C738D-B06F-4432-B03D-706EDB12BB7D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F3EC4E86-AC37-4DB0-A43D-CC2572DA760F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3EC4E86-AC37-4DB0-A43D-CC2572DA760F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3EC4E86-AC37-4DB0-A43D-CC2572DA760F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3EC4E86-AC37-4DB0-A43D-CC2572DA760F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +116,11 @@ Global
 		{BEADB7AB-ADD6-4D57-B89B-F14090CD8630} = {10EB2BE8-A8C2-4FE6-A89C-FE1543E9705D}
 		{F5BA2EF0-6009-403B-AAF8-0AA97C716365} = {BEADB7AB-ADD6-4D57-B89B-F14090CD8630}
 		{5BDBF132-88F5-48E3-AA1C-436BB363B90E} = {8D59AA7F-AD25-4A5D-AC92-9BC417F3EBEE}
+		{B764D0AC-D382-4B63-A578-08D9E64B73A4} = {BB3DD210-FF66-4E17-9FC3-DC40264018CF}
+		{33B2E7D4-5506-4748-B509-E7AF447D45F0} = {BB3DD210-FF66-4E17-9FC3-DC40264018CF}
+		{2BDE267A-E135-4A91-85DE-5087A6C618A5} = {BB3DD210-FF66-4E17-9FC3-DC40264018CF}
+		{CC6C738D-B06F-4432-B03D-706EDB12BB7D} = {BB3DD210-FF66-4E17-9FC3-DC40264018CF}
+		{F3EC4E86-AC37-4DB0-A43D-CC2572DA760F} = {BB3DD210-FF66-4E17-9FC3-DC40264018CF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2257C8F-01F9-4A33-9BC4-BB8B66BCE654}
