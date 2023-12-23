@@ -9,7 +9,6 @@
   <ItemGroup>
     <ProjectReference Include="..\asagiv.UI.gptAssistant.Web.Client\asagiv.UI.gptAssistant.Web.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.0" />
-    <PackageReference Include="Radzen.Blazor" Version="4.23.4" />
   </ItemGroup>
 
 </Project>

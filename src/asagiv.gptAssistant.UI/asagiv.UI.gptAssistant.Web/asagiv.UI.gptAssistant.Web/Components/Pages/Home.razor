@@ -1,38 +1,47 @@
-@page "/"
+﻿@page "/"
 
 <PageTitle>Home</PageTitle>
 
-<RadzenLayout>
+<style>
 
-    <RadzenHeader Visible="true">
-        <RadzenText Text="GPT Assistant"
-                    Style="font-family: Georgia; font-size: 24px; color: #ffffff; margin: 10px; text-align: center" />
-    </RadzenHeader>
+    .container {
+        position: relative; /* Ensure positioning context for fixed element */
+        width: 100%;
+        height: 100%; /* Ensure full viewport height */
+        margin-bottom: 10px; /* Account for the fixed element's height */
+        box-sizing: border-box;
+    }
 
-    <RadzenFooter Style="height: Auto">
+    .fixed-textarea {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px; /* Adjust height as needed */
+        background-color: #f0f0f0; /* Optional background color */
+        padding: 10px; /* Add padding for text area */
+        box-sizing: border-box;
+    }
 
-        <RadzenRow >
+    .fixed-textarea textarea {
+        width: 100%;
+        height: 100%;
+        margin: 0; /* Override default margin */
+        resize: none; /* Prevent resizing */
+    }
 
-            <RadzenColumn Size="9">
+</style>
 
-                <RadzenFormField Style="width: 100%; font-family: Didot;"
-                                 Text="Enter your request here"
-                                 Variant="Variant.Outlined">
+<div class="container">
 
-                    <RadzenTextArea Style="width: 100%; font-family: Didot; font-size: 20px" />
-                                
-                </RadzenFormField>
+    <div>
+        Hello World!
+    </div>
 
-            </RadzenColumn>
+    <div class="fixed-textarea">
 
-            <RadzenColumn Size="3">
+        <textarea placeholder="Enter a prompt here." />
 
+    </div>
 
-
-            </RadzenColumn>
-
-        </RadzenRow>
-
-    </RadzenFooter>
-
-</RadzenLayout>
+</div>
