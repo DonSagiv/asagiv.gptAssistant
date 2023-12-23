@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\asagiv.UI.gptAssistant.Web.Client\asagiv.UI.gptAssistant.Web.Client.csproj" />
+    <PackageReference Include="bootstrap" Version="5.3.2" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.0" />
   </ItemGroup>
 
