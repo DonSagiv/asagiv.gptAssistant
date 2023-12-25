@@ -43,13 +43,16 @@ namespace asagiv.UI.gptAssistant.ConsoleDiagnostics
                     .UseStream()
                     .Build();
 
-                var responseEnumerable = requestProcessor
-                    .ProcessAsync(request, options)
-                    .Where(x => x != null);
+                var responseEnumerable = await requestProcessor
+                    .ProcessAsync(request, options);
+
+                var responseList = responseEnumerable
+                    .Where(x => x != null)
+                    .ToArray();
 
                 Console.WriteLine();
 
-                await foreach (var item in responseEnumerable)
+                foreach (var item in responseList)
                 {
                     foreach (var choice in item.Choices)
                     {
