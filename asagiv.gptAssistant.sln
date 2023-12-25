@@ -31,11 +31,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.Infrastructure.gptAs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.Infrastructure.gptAssistant.Web", "src\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.Web\asagiv.Infrastructure.gptAssistant.Web.csproj", "{5BDBF132-88F5-48E3-AA1C-436BB363B90E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asagiv.UI.gptAssistant.OpenSilver.Browser", "asagiv.UI.gptAssistant.OpenSilver\asagiv.UI.gptAssistant.OpenSilver.Browser\asagiv.UI.gptAssistant.OpenSilver.Browser.csproj", "{E30071A6-65F4-4E3F-8253-39D1870906A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.UI.OpenSilver", "..\asagiv.common\src\asagiv.ui\asagiv.UI.OpenSilver\asagiv.UI.OpenSilver.csproj", "{8B8F97E1-AE81-408C-A42C-5497FC294F95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asagiv.UI.gptAssistant.OpenSilver", "asagiv.UI.gptAssistant.OpenSilver\asagiv.UI.gptAssistant.OpenSilver\asagiv.UI.gptAssistant.OpenSilver.csproj", "{6B7A23D3-60C3-4DED-AD8F-19D1F3AB53E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.UI.gptAssistant.OpenSilver", "src\asagiv.gptAssistant.UI\asagiv.UI.gptAssistant.OpenSilver\asagiv.UI.gptAssistant.OpenSilver\asagiv.UI.gptAssistant.OpenSilver.csproj", "{55D7AC1D-E33C-4130-B63B-5D93B96E42D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asagiv.UI.gptAssistant.OpenSilver.Simulator", "asagiv.UI.gptAssistant.OpenSilver\asagiv.UI.gptAssistant.OpenSilver.Simulator\asagiv.UI.gptAssistant.OpenSilver.Simulator.csproj", "{0F75F657-0B75-460A-9825-A1484F7481CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.UI.gptAssistant.OpenSilver.Browser", "src\asagiv.gptAssistant.UI\asagiv.UI.gptAssistant.OpenSilver\asagiv.UI.gptAssistant.OpenSilver.Browser\asagiv.UI.gptAssistant.OpenSilver.Browser.csproj", "{F5052532-F169-4034-A9F1-E346C87C5DD7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.UI.gptAssistant.OpenSilver.Simulator", "src\asagiv.gptAssistant.UI\asagiv.UI.gptAssistant.OpenSilver\asagiv.UI.gptAssistant.OpenSilver.Simulator\asagiv.UI.gptAssistant.OpenSilver.Simulator.csproj", "{06F3C73A-AA75-447A-A65D-50DCF479D67E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,18 +73,22 @@ Global
 		{5BDBF132-88F5-48E3-AA1C-436BB363B90E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BDBF132-88F5-48E3-AA1C-436BB363B90E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BDBF132-88F5-48E3-AA1C-436BB363B90E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E30071A6-65F4-4E3F-8253-39D1870906A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E30071A6-65F4-4E3F-8253-39D1870906A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E30071A6-65F4-4E3F-8253-39D1870906A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E30071A6-65F4-4E3F-8253-39D1870906A1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6B7A23D3-60C3-4DED-AD8F-19D1F3AB53E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B7A23D3-60C3-4DED-AD8F-19D1F3AB53E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B7A23D3-60C3-4DED-AD8F-19D1F3AB53E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B7A23D3-60C3-4DED-AD8F-19D1F3AB53E6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0F75F657-0B75-460A-9825-A1484F7481CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F75F657-0B75-460A-9825-A1484F7481CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F75F657-0B75-460A-9825-A1484F7481CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F75F657-0B75-460A-9825-A1484F7481CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B8F97E1-AE81-408C-A42C-5497FC294F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B8F97E1-AE81-408C-A42C-5497FC294F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B8F97E1-AE81-408C-A42C-5497FC294F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B8F97E1-AE81-408C-A42C-5497FC294F95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55D7AC1D-E33C-4130-B63B-5D93B96E42D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D7AC1D-E33C-4130-B63B-5D93B96E42D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D7AC1D-E33C-4130-B63B-5D93B96E42D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D7AC1D-E33C-4130-B63B-5D93B96E42D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5052532-F169-4034-A9F1-E346C87C5DD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5052532-F169-4034-A9F1-E346C87C5DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5052532-F169-4034-A9F1-E346C87C5DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5052532-F169-4034-A9F1-E346C87C5DD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06F3C73A-AA75-447A-A65D-50DCF479D67E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06F3C73A-AA75-447A-A65D-50DCF479D67E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06F3C73A-AA75-447A-A65D-50DCF479D67E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06F3C73A-AA75-447A-A65D-50DCF479D67E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -100,9 +106,10 @@ Global
 		{BEADB7AB-ADD6-4D57-B89B-F14090CD8630} = {10EB2BE8-A8C2-4FE6-A89C-FE1543E9705D}
 		{F5BA2EF0-6009-403B-AAF8-0AA97C716365} = {BEADB7AB-ADD6-4D57-B89B-F14090CD8630}
 		{5BDBF132-88F5-48E3-AA1C-436BB363B90E} = {8D59AA7F-AD25-4A5D-AC92-9BC417F3EBEE}
-		{E30071A6-65F4-4E3F-8253-39D1870906A1} = {BB3DD210-FF66-4E17-9FC3-DC40264018CF}
-		{6B7A23D3-60C3-4DED-AD8F-19D1F3AB53E6} = {BB3DD210-FF66-4E17-9FC3-DC40264018CF}
-		{0F75F657-0B75-460A-9825-A1484F7481CA} = {BB3DD210-FF66-4E17-9FC3-DC40264018CF}
+		{8B8F97E1-AE81-408C-A42C-5497FC294F95} = {BB3DD210-FF66-4E17-9FC3-DC40264018CF}
+		{55D7AC1D-E33C-4130-B63B-5D93B96E42D7} = {BB3DD210-FF66-4E17-9FC3-DC40264018CF}
+		{F5052532-F169-4034-A9F1-E346C87C5DD7} = {BB3DD210-FF66-4E17-9FC3-DC40264018CF}
+		{06F3C73A-AA75-447A-A65D-50DCF479D67E} = {BB3DD210-FF66-4E17-9FC3-DC40264018CF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2257C8F-01F9-4A33-9BC4-BB8B66BCE654}

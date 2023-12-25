@@ -11,7 +11,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\asagiv.UI.gptAssistant.OpenSilver\asagiv.UI.gptAssistant.OpenSilver.csproj" />
+	  <ProjectReference Include="..\asagiv.UI.gptAssistant.OpenSilver\asagiv.UI.gptAssistant.OpenSilver.csproj" />
 	</ItemGroup>
 
 </Project>

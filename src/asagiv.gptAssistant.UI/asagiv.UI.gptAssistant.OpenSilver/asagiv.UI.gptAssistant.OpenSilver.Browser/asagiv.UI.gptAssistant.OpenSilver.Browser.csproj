@@ -15,12 +15,12 @@
 		<PackageReference Include="OpenSilver" Version="2.0.1" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\asagiv.UI.gptAssistant.OpenSilver\asagiv.UI.gptAssistant.OpenSilver.csproj" />
+	</ItemGroup>
+
 	<PropertyGroup>
 		<DisableImplicitNamespaceImports>True</DisableImplicitNamespaceImports>
 	</PropertyGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\asagiv.UI.gptAssistant.OpenSilver\asagiv.UI.gptAssistant.OpenSilver.csproj" />
-	</ItemGroup>
 
 </Project>
