@@ -2,6 +2,7 @@
 using asagiv.domain.core.DependencyInjection;
 using asagiv.Domain.gptAssistant.Enumerators;
 using asagiv.Domain.gptAssistant.Interfaces;
+using System.Linq;
 using System.Text.Json.Nodes;
 
 namespace asagiv.Infrastructure.gptAssistant.Serializatrion.JsonConverters

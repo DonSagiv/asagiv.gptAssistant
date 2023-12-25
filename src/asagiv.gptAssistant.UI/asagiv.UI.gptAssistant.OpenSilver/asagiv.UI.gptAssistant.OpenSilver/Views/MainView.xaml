@@ -11,7 +11,7 @@
                    Height="150">
 
             <cc:AsagivButton Margin="10"
-                             MinWidth="100"
+                             MinWidth="150"
                              Content="Submit"
                              DockPanel.Dock="Right"
                              Command="{Binding SubmitCommand}"/>
@@ -21,7 +21,7 @@
                               KeyDown="PromptKeyDown"
                               TextAlignment="Left"
                               LabelText="Enter Prompt Here"
-                              Text="{Binding TextBoxString, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                              Text="{Binding RequestString, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
         </DockPanel>
 

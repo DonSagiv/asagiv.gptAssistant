@@ -7,15 +7,15 @@ namespace asagiv.UI.gptAssistant.OpenSilver.ViewModels
     public class MainViewModel : ReactiveObject
     {
         #region Fields
-        private string _textBoxString;
+        private string _requestString;
         #endregion
 
         #region Properties
         public ObservableCollection<string> ChatHistory { get; }
-        public string TextBoxString
+        public string RequestString
         {
-            get => _textBoxString;
-            set => this.RaiseAndSetIfChanged(ref _textBoxString, value);
+            get => _requestString;
+            set => this.RaiseAndSetIfChanged(ref _requestString, value);
         }
         #endregion
 
@@ -35,9 +35,9 @@ namespace asagiv.UI.gptAssistant.OpenSilver.ViewModels
         #region Methods
         public void OnSubmit()
         {
-            ChatHistory.Add((string)TextBoxString?.Clone());
+            ChatHistory.Add((string)RequestString?.Clone());
 
-            TextBoxString = string.Empty;
+            RequestString = string.Empty;
         }
         #endregion
     }

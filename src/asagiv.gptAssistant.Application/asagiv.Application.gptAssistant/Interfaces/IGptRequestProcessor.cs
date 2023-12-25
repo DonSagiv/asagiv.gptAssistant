@@ -1,10 +1,11 @@
 ﻿using asagiv.Domain.gptAssistant.Interfaces;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace asagiv.Application.gptAssistant.Interfaces
 {
     public interface IGptRequestProcessor
     {
-        IAsyncEnumerable<IGptResponse> ProcessAsync(IGptRequest gptRequest, IRequestProcessorOptions options);
+        Task<IEnumerable<IGptResponse>> ProcessAsync(IGptRequest gptRequest, IRequestProcessorOptions options);
     }
 }
