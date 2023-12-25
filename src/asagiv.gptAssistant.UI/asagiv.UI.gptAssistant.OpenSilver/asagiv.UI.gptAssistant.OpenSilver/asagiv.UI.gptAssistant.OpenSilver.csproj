@@ -35,4 +35,8 @@
 	  <UpToDateCheckInput Remove="Views\MainView.xaml" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\..\..\asagiv.common\src\asagiv.ui\asagiv.UI.OpenSilver\asagiv.UI.OpenSilver.csproj" />
+	</ItemGroup>
+
 </Project>

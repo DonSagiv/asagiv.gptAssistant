@@ -1,4 +1,5 @@
 ﻿using asagiv.UI.gptAssistant.OpenSilver.ViewModels;
+using asagiv.UI.OpenSilver.CustomControls;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -20,11 +21,20 @@ namespace asagiv.UI.gptAssistant.OpenSilver.Views
         #endregion
 
         #region Methods
-        private void KeyDown(object sender, KeyEventArgs e)
+        private void PromptKeyDown(object sender, KeyEventArgs e)
         {
+            var textbox = sender as AsagivTextBox;
+
             if(e.Key == Key.Enter)
             {
-                ViewModel.OnSubmit();
+                if(e.KeyModifiers == ModifierKeys.None) 
+                {
+                    ViewModel.OnSubmit();
+                }
+                else
+                {
+                    textbox.Text += "\n";
+                }
             }
         }
         #endregion
