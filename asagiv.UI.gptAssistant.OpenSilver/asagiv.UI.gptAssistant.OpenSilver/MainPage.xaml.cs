@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
 namespace asagiv.UI.gptAssistant.OpenSilver
 {
@@ -12,8 +7,6 @@ namespace asagiv.UI.gptAssistant.OpenSilver
         public MainPage()
         {
             this.InitializeComponent();
-
-            // Enter construction logic here...
         }
     }
 }
