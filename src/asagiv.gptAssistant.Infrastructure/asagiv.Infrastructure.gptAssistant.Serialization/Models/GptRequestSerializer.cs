@@ -3,7 +3,7 @@ using asagiv.Domain.Core.DependencyInjection;
 using asagiv.Domain.gptAssistant.Interfaces;
 using System.Text.Json;
 
-namespace asagiv.Infrastructure.gptAssistant.Serializatrion.Models
+namespace asagiv.Infrastructure.gptAssistant.Serialization.Models
 {
     [Export(typeof(IGptRequestSerializer), creationPolicy: CreationPolicy.Singleton)]
     internal class GptRequestSerializer : IGptRequestSerializer

@@ -3,14 +3,14 @@ using asagiv.Domain.Core.DependencyInjection;
 using asagiv.Domain.gptAssistant.Interfaces;
 using System.Text.Json.Nodes;
 
-namespace asagiv.Infrastructure.gptAssistant.Serializatrion.JsonConverters
+namespace asagiv.Infrastructure.gptAssistant.Serialization.JsonConverters
 {
     internal abstract class GptResponseJsonConverterBase : IGptResponseParser
     {
         #region Methods
         public IGptResponse ParseResponse(string jsonString)
         {
-            if(!IsValidJsonString(jsonString, out var modifiedJsonString))
+            if (!IsValidJsonString(jsonString, out var modifiedJsonString))
             {
                 return null;
             }

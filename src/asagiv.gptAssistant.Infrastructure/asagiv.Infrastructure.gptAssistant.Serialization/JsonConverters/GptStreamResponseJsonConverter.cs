@@ -5,7 +5,7 @@ using asagiv.Domain.gptAssistant.Interfaces;
 using System.Linq;
 using System.Text.Json.Nodes;
 
-namespace asagiv.Infrastructure.gptAssistant.Serializatrion.JsonConverters
+namespace asagiv.Infrastructure.gptAssistant.Serialization.JsonConverters
 {
     [Export(typeof(IGptResponseParser), contractKey: ResponseDeliveryMethod.Stream, creationPolicy: CreationPolicy.Singleton)]
     internal sealed class GptStreamResponseJsonConverter : GptResponseJsonConverterBase
@@ -13,7 +13,7 @@ namespace asagiv.Infrastructure.gptAssistant.Serializatrion.JsonConverters
         protected override bool IsValidJsonString(string jsonString, out string modifiedJsonString)
         {
             if (string.IsNullOrWhiteSpace(jsonString) ||
-                jsonString == "data: [DONE]" || 
+                jsonString == "data: [DONE]" ||
                 jsonString == "\ndata: [DONE]")
             {
                 modifiedJsonString = null;
