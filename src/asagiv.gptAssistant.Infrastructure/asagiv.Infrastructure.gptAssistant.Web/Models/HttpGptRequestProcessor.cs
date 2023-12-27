@@ -1,5 +1,4 @@
 ﻿using asagiv.Appl.gptAssistant.Interfaces;
-using asagiv.Domain.Core.DependencyInjection;
 using asagiv.Domain.Core.Models;
 using asagiv.Domain.gptAssistant.Enumerators;
 using asagiv.Domain.gptAssistant.Interfaces;
@@ -14,7 +13,6 @@ using System.Threading.Tasks;
 
 namespace asagiv.Infrastructure.gptAssistant.Web.Models
 {
-    [Export(typeof(IGptRequestProcessor))]
     public class HttpGptRequestProcessor : DisposableBase, IGptRequestProcessor
     {
         #region Statics
@@ -53,9 +51,9 @@ namespace asagiv.Infrastructure.gptAssistant.Web.Models
         #region Methods
         public void ProcessRequest(IGptRequest request, IRequestProcessorOptions options)
         {
-            if (!(options is HttpRequestProcessorOptions httpOptions))
+            if(!(options is HttpRequestProcessorOptions httpOptions))
             {
-                throw new ArgumentException("Incorrect request processor options type.", nameof(options));
+                throw new ArgumentException("Incorrect type of processor options used for this request.");
             }
 
             var pipeline = new HttpRequestPipeline

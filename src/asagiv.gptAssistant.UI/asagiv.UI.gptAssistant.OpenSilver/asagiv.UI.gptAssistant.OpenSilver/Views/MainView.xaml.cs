@@ -1,5 +1,7 @@
-﻿using asagiv.UI.gptAssistant.OpenSilver.ViewModels;
+﻿using asagiv.Domain.Core.DependencyInjection;
+using asagiv.UI.gptAssistant.OpenSilver.Interfaces;
 using asagiv.UI.OpenSilver.CustomControls;
+using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -8,7 +10,7 @@ namespace asagiv.UI.gptAssistant.OpenSilver.Views
     public partial class MainView : UserControl
     {
         #region Properties
-        public MainViewModel ViewModel => DataContext as MainViewModel;
+        public IMainViewModel ViewModel => DataContext as IMainViewModel;
         #endregion
 
         #region Constructor
@@ -16,7 +18,9 @@ namespace asagiv.UI.gptAssistant.OpenSilver.Views
         {
             this.InitializeComponent();
 
-            DataContext = new MainViewModel();
+            PromptTextBox.KeyDown += PromptKeyDown;
+
+            DataContext = ComponentContainer.Container.Build<IMainViewModel>();
         }
         #endregion
 
@@ -29,7 +33,7 @@ namespace asagiv.UI.gptAssistant.OpenSilver.Views
             {
                 if(e.KeyModifiers == ModifierKeys.None) 
                 {
-                    ViewModel.OnSubmit();
+                    ViewModel.Submit();
                 }
                 else
                 {

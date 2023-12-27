@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.Serializatrion\asagiv.Infrastructure.gptAssistant.Serializatrion.csproj" />
+    <ProjectReference Include="..\..\..\src\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.Serializatrion\asagiv.Infrastructure.gptAssistant.Seralization.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,8 +1,7 @@
-﻿using asagiv.Domain.gptAssistant.Interfaces;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 
-namespace asagiv.Appl.gptAssistant.Interfaces
+namespace asagiv.Domain.gptAssistant.Interfaces
 {
     public interface IGptRequestProcessor : IDisposable
     {

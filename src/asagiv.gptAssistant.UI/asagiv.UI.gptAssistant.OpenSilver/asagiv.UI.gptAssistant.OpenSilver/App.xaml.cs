@@ -1,4 +1,8 @@
 ﻿using asagiv.Domain.Core.DependencyInjection;
+using asagiv.Domain.gptAssistant.Interfaces;
+using asagiv.Infrastructure.gptAssistant.Web.Models;
+using asagiv.UI.gptAssistant.OpenSilver.Interfaces;
+using asagiv.UI.gptAssistant.OpenSilver.ViewModels;
 using System.Windows;
 
 namespace asagiv.UI.gptAssistant.OpenSilver
@@ -9,9 +13,15 @@ namespace asagiv.UI.gptAssistant.OpenSilver
         {
             this.InitializeComponent();
 
-            ComponentContainer.Container.Initialize();
+            ComponentContainer.Container.Initialize(cb =>
+            {
+                cb.AddSingleton<IMainViewModel, MainViewModel>();
+
+                cb.AddTransient<IGptRequestProcessor, HttpGptRequestProcessor>();
+            });
 
             var mainPage = new MainPage();
+
             Window.Current.Content = mainPage;
         }
     }

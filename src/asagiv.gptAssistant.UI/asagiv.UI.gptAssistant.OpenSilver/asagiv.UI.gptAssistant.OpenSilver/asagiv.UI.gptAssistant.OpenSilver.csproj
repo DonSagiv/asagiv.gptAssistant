@@ -5,6 +5,7 @@
 		<EnableDefaultItems>false</EnableDefaultItems>
 		<DefineSilverlight>true</DefineSilverlight>
 		<Nullable>disable</Nullable>
+		<UserSecretsId>d061b2ed-dc8b-4dc9-8534-1676a544716f</UserSecretsId>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -26,7 +27,11 @@
 
 	<ItemGroup>
 		<Compile Include="App.xaml.cs" />
+		<Compile Include="Interfaces\IGptChatItemViewModel.cs" />
+		<Compile Include="Interfaces\IMainViewModel.cs" />
 		<Compile Include="MainPage.xaml.cs" />
+		<Compile Include="ViewModels\GptRequestViewModel.cs" />
+		<Compile Include="ViewModels\GptResponseViewModel.cs" />
 		<Compile Include="ViewModels\MainViewModel.cs" />
 		<Compile Include="Views\MainView.xaml.cs" />
 	</ItemGroup>
@@ -39,7 +44,7 @@
 	  <ProjectReference Include="..\..\..\..\..\asagiv.common\src\asagiv.ui\asagiv.UI.OpenSilver\asagiv.UI.OpenSilver.csproj" />
 	  <ProjectReference Include="..\..\..\asagiv.gptAssistant.Application\asagiv.Appl.gptAssistant\asagiv.Appl.gptAssistant.csproj" />
 	  <ProjectReference Include="..\..\..\asagiv.gptAssistant.Domain\asagiv.Domain.gptAssistant\asagiv.Domain.gptAssistant.csproj" />
-	  <ProjectReference Include="..\..\..\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.Serializatrion\asagiv.Infrastructure.gptAssistant.Serializatrion.csproj" />
+	  <ProjectReference Include="..\..\..\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.Serialization\asagiv.Infrastructure.gptAssistant.Seralization.csproj" />
 	  <ProjectReference Include="..\..\..\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.Web\asagiv.Infrastructure.gptAssistant.Web.csproj" />
 	</ItemGroup>
 

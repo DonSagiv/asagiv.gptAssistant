@@ -3,7 +3,7 @@ using asagiv.Domain.gptAssistant.Interfaces;
 
 namespace asagiv.Domain.gptAssistant.Models
 {
-    public class GptRequest : IGptRequest
+    internal class GptRequest : IGptRequest
     {
         #region Properties
         public string Model { get; set; }
