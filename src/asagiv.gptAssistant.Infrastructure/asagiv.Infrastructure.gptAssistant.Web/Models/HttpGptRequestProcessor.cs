@@ -1,6 +1,6 @@
-﻿using asagiv.Application.gptAssistant.Interfaces;
-using asagiv.domain.core.DependencyInjection;
-using asagiv.domain.core.Models;
+﻿using asagiv.Appl.gptAssistant.Interfaces;
+using asagiv.Domain.Core.DependencyInjection;
+using asagiv.Domain.Core.Models;
 using asagiv.Domain.gptAssistant.Enumerators;
 using asagiv.Domain.gptAssistant.Interfaces;
 using System;
@@ -10,7 +10,6 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace asagiv.Infrastructure.gptAssistant.Web.Models

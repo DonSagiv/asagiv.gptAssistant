@@ -6,7 +6,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\..\..\asagiv.common\src\asagiv.domain\asagiv.domain.core\asagiv.domain.core.csproj" />
+	  <ProjectReference Include="..\..\..\..\asagiv.common\src\asagiv.Domain\asagiv.Domain.Core\asagiv.Domain.Core.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using asagiv.Domain.Core.DependencyInjection;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace asagiv.UI.gptAssistant.OpenSilver
 {
@@ -13,7 +9,7 @@ namespace asagiv.UI.gptAssistant.OpenSilver
         {
             this.InitializeComponent();
 
-            // Enter construction logic here...
+            ComponentContainer.Container.Initialize();
 
             var mainPage = new MainPage();
             Window.Current.Content = mainPage;

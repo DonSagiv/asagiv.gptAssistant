@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\asagiv.common\src\asagiv.domain\asagiv.domain.core\asagiv.domain.core.csproj" />
-    <ProjectReference Include="..\..\asagiv.gptAssistant.Application\asagiv.Application.gptAssistant\asagiv.Application.gptAssistant.csproj" />
+    <ProjectReference Include="..\..\asagiv.gptAssistant.Application\asagiv.Appl.gptAssistant\asagiv.Appl.gptAssistant.csproj" />
+    <ProjectReference Include="..\..\asagiv.gptAssistant.Application\asagiv.Application.gptAssistant\asagiv.Appl.gptAssistant.csproj" />
     <ProjectReference Include="..\..\asagiv.gptAssistant.Domain\asagiv.Domain.gptAssistant\asagiv.Domain.gptAssistant.csproj" />
     <ProjectReference Include="..\..\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.Serializatrion\asagiv.Infrastructure.gptAssistant.Serializatrion.csproj" />
     <ProjectReference Include="..\..\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.Web\asagiv.Infrastructure.gptAssistant.Web.csproj" />

@@ -1,6 +1,6 @@
 ﻿using asagiv.Domain.gptAssistant.Interfaces;
 
-namespace asagiv.Infrastructure.gptAssistant.Web
+namespace asagiv.Infrastructure.gptAssistant.Web.Models
 {
     public class HttpRequestProcessorOptions : IRequestProcessorOptions
     {

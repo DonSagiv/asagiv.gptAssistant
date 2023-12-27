@@ -1,6 +1,6 @@
 ﻿using asagiv.Domain.gptAssistant.Interfaces;
 
-namespace asagiv.Application.gptAssistant.Interfaces
+namespace asagiv.Appl.gptAssistant.Interfaces
 {
     public interface IGptRequestSerializer
     {

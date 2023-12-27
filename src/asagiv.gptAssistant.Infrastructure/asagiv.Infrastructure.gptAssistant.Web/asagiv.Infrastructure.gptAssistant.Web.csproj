@@ -12,7 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\asagiv.gptAssistant.Application\asagiv.Application.gptAssistant\asagiv.Application.gptAssistant.csproj" />
+    <ProjectReference Include="..\..\asagiv.gptAssistant.Application\asagiv.Appl.gptAssistant\asagiv.Appl.gptAssistant.csproj" />
+    <ProjectReference Include="..\..\asagiv.gptAssistant.Application\asagiv.Application.gptAssistant\asagiv.Appl.gptAssistant.csproj" />
     <ProjectReference Include="..\..\asagiv.gptAssistant.Domain\asagiv.Domain.gptAssistant\asagiv.Domain.gptAssistant.csproj" />
   </ItemGroup>
 

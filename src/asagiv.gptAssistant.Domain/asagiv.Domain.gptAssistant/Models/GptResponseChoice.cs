@@ -1,4 +1,4 @@
-﻿using asagiv.domain.core.DependencyInjection;
+﻿using asagiv.Domain.Core.DependencyInjection;
 using asagiv.Domain.gptAssistant.Enumerators;
 using asagiv.Domain.gptAssistant.Interfaces;
 

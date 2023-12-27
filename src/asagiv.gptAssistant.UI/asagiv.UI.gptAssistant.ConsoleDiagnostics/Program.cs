@@ -1,7 +1,6 @@
-﻿using asagiv.Application.gptAssistant.Interfaces;
-using asagiv.domain.core.DependencyInjection;
+﻿using asagiv.Appl.gptAssistant.Interfaces;
+using asagiv.Domain.Core.DependencyInjection;
 using asagiv.Domain.gptAssistant.Interfaces;
-using asagiv.Infrastructure.gptAssistant.Web;
 using asagiv.Infrastructure.gptAssistant.Web.Models;
 using Microsoft.Extensions.Configuration;
 

@@ -1,6 +1,6 @@
 ﻿using asagiv.Domain.gptAssistant.Enumerators;
 
-namespace asagiv.Application.gptAssistant.Interfaces
+namespace asagiv.Appl.gptAssistant.Interfaces
 {
     public interface IGptResponseParserFactory
     {

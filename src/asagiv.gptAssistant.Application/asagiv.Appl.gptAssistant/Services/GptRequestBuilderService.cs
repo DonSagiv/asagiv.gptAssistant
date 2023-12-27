@@ -1,8 +1,8 @@
-﻿using asagiv.Application.gptAssistant.Interfaces;
-using asagiv.domain.core.DependencyInjection;
+﻿using asagiv.Appl.gptAssistant.Interfaces;
+using asagiv.Domain.Core.DependencyInjection;
 using asagiv.Domain.gptAssistant.Interfaces;
 
-namespace asagiv.Application.gptAssistant.Services
+namespace asagiv.Appl.gptAssistant.Services
 {
     [Export(typeof(IGptRequestBuilderService), creationPolicy: CreationPolicy.Singleton)]
     public class GptRequestBuilderService : IGptRequestBuilderService

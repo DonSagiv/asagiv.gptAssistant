@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\asagiv.common\src\asagiv.domain\asagiv.domain.core\asagiv.domain.core.csproj" />
     <ProjectReference Include="..\..\asagiv.gptAssistant.Domain\asagiv.Domain.gptAssistant\asagiv.Domain.gptAssistant.csproj" />
   </ItemGroup>
 
