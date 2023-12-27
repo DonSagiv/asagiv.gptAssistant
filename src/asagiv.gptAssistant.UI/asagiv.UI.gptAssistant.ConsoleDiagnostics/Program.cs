@@ -1,6 +1,8 @@
 ﻿using asagiv.Application.gptAssistant.Interfaces;
 using asagiv.domain.core.DependencyInjection;
+using asagiv.Domain.gptAssistant.Interfaces;
 using asagiv.Infrastructure.gptAssistant.Web;
+using asagiv.Infrastructure.gptAssistant.Web.Models;
 using Microsoft.Extensions.Configuration;
 
 namespace asagiv.UI.gptAssistant.ConsoleDiagnostics
@@ -13,29 +15,23 @@ namespace asagiv.UI.gptAssistant.ConsoleDiagnostics
             ComponentContainer.Container.Initialize();
 
             var builderService = ComponentContainer.Container.Build<IGptRequestBuilderService>();
-            var requestProcessor = ComponentContainer.Container.Build<IGptRequestProcessor>();
 
-            var builder = builderService.GetNew();
-
-            var options = new HttpRequestProcessorOptions
+            using(var httpRequestProcessor = ComponentContainer.Container.Build<IGptRequestProcessor>())
             {
-                ApiKey = GetApiKey()
-            };
+                var builder = builderService.GetNew();
 
-            Console.Write("What am I?: ");
+                var options = new HttpRequestProcessorOptions
+                {
+                    ApiKey = GetApiKey()
+                };
 
-            var systemMessage = Console.ReadLine();
+                Console.Write("What am I?: ");
 
-            while (true)
-            {
+                var systemMessage = Console.ReadLine();
+
                 Console.Write("What is your request?: ");
 
                 var userMessage = Console.ReadLine();
-
-                if(userMessage == "quit" || userMessage == "exit")
-                {
-                    break;
-                }
 
                 var request = builder.WithModel("gpt-4-1106-preview")
                     .WithSystemMessage(systemMessage)
@@ -43,26 +39,29 @@ namespace asagiv.UI.gptAssistant.ConsoleDiagnostics
                     .UseStream()
                     .Build();
 
-                var responseEnumerable = await requestProcessor
-                    .ProcessAsync(request, options);
+                httpRequestProcessor.ResponseProcessedObservable
+                    .Subscribe(WriteResponse);
 
-                var responseList = responseEnumerable
-                    .Where(x => x != null)
-                    .ToArray();
+                httpRequestProcessor.ProcessRequest(request, options);
 
-                Console.WriteLine();
+                await httpRequestProcessor.AwaitCompletion();
+            }
 
-                foreach (var item in responseList)
-                {
-                    foreach (var choice in item.Choices)
-                    {
-                        Thread.Sleep(100);
+            Console.WriteLine();
 
-                        Console.Write(choice.Payload.Content);
-                    }
-                }
+            Console.ReadKey();
+        }
 
-                Console.WriteLine();
+        private static void WriteResponse(IGptResponse response)
+        {
+            if (response?.Choices == null || response.Choices.Length == 0)
+            {
+                return;
+            }
+
+            foreach(var choice in response.Choices)
+            {
+                Console.Write(choice.Payload.Content);
             }
         }
 
