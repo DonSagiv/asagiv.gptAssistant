@@ -8,7 +8,11 @@
 
     <Grid>
 
-        <views:ChatView DataContext="{Binding ChatViewModel}" />
+        <views:SetupView DataContext="{Binding SetupViewModel}"
+                         Visibility="Visible" />
+
+        <views:ChatView DataContext="{Binding ChatViewModel}" 
+                        Visibility="Collapsed" />
 
     </Grid>
 

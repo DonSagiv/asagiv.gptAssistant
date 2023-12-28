@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="asagiv.UI.gptAssistant.OpenSilver.Views.SetupView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:cc="clr-namespace:asagiv.UI.OpenSilver.CustomControls;assembly=asagiv.UI.OpenSilver"
+             Margin="40">
+
+    <DockPanel>
+
+        <cc:AsagivTextBox Margin="10"
+                          DockPanel.Dock="Top"
+                          LabelText="API Key"
+                          Text="{Binding ApiKey, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <cc:AsagivButton Margin="100, 10"
+                         DockPanel.Dock="Bottom"
+                         Content="OK" />
+
+        <cc:AsagivTextBox Margin="10"
+                          LabelText="GPT System Parameter" 
+                          Text="{Binding GptSystemParameter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+    </DockPanel>
+
+
+
+</UserControl>

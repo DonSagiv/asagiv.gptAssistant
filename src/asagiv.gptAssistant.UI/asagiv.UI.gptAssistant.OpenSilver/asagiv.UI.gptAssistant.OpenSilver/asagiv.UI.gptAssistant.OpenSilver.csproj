@@ -26,6 +26,9 @@
 		<Page Include="Views\MainView.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>
+		<Page Include="Views\SetupView.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -33,13 +36,16 @@
 		<Compile Include="Interfaces\IGptChatItemViewModel.cs" />
 		<Compile Include="Interfaces\IChatViewModel.cs" />
 		<Compile Include="Interfaces\IMainViewModel.cs" />
+		<Compile Include="Interfaces\ISetupViewModel.cs" />
 		<Compile Include="MainPage.xaml.cs" />
 		<Compile Include="ViewModels\ChatViewModel.cs" />
 		<Compile Include="ViewModels\GptRequestViewModel.cs" />
 		<Compile Include="ViewModels\GptResponseViewModel.cs" />
 		<Compile Include="ViewModels\MainViewModel.cs" />
+		<Compile Include="ViewModels\SetupViewModel.cs" />
 		<Compile Include="Views\ChatView.xaml.cs" />
 		<Compile Include="Views\MainView.xaml.cs" />
+		<Compile Include="Views\SetupView.xaml.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -56,6 +62,10 @@
 
 	<ItemGroup>
 	  <UpToDateCheckInput Remove="Views\ChatView.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <UpToDateCheckInput Remove="Views\SetupView.xaml" />
 	</ItemGroup>
 
 </Project>

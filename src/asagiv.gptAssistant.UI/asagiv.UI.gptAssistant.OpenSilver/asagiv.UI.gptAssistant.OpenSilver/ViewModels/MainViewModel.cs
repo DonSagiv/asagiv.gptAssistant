@@ -7,12 +7,15 @@ namespace asagiv.UI.gptAssistant.OpenSilver.ViewModels
     {
         #region ViewModels
         public IChatViewModel ChatViewModel { get; }
+        public ISetupViewModel SetupViewModel { get; }
         #endregion
 
         #region Constructor
-        public MainViewModel(IChatViewModel chatViewModelInput)
+        public MainViewModel(IChatViewModel chatViewModelInput,
+            ISetupViewModel setupViewModelInput)
         {
             ChatViewModel = chatViewModelInput;
+            SetupViewModel = setupViewModelInput;
         }
         #endregion
     }
