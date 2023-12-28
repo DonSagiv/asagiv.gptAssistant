@@ -16,30 +16,9 @@ namespace asagiv.UI.gptAssistant.OpenSilver.Views
         #region Constructor
         public MainView()
         {
-            this.InitializeComponent();
-
-            PromptTextBox.KeyDown += PromptKeyDown;
+            InitializeComponent();
 
             DataContext = ComponentContainer.Container.Build<IMainViewModel>();
-        }
-        #endregion
-
-        #region Methods
-        private void PromptKeyDown(object sender, KeyEventArgs e)
-        {
-            var textbox = sender as AsagivTextBox;
-
-            if(e.Key == Key.Enter)
-            {
-                if(e.KeyModifiers == ModifierKeys.None) 
-                {
-                    ViewModel.Submit();
-                }
-                else
-                {
-                    textbox.Text += "\n";
-                }
-            }
         }
         #endregion
     }

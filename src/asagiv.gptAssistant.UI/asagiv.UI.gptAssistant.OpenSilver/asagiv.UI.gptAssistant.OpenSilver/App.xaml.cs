@@ -16,6 +16,7 @@ namespace asagiv.UI.gptAssistant.OpenSilver
             ComponentContainer.Container.Initialize(cb =>
             {
                 cb.AddSingleton<IMainViewModel, MainViewModel>();
+                cb.AddSingleton<IChatViewModel, ChatViewModel>();
 
                 cb.AddTransient<IGptRequestProcessor, HttpGptRequestProcessor>();
             });

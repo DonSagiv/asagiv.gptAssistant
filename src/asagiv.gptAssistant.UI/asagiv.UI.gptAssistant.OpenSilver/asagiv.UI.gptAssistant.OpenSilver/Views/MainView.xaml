@@ -3,54 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:cc="clr-namespace:asagiv.UI.OpenSilver.CustomControls;assembly=asagiv.UI.OpenSilver"
-             xmlns:i="clr-namespace:asagiv.UI.gptAssistant.OpenSilver.Interfaces"
+             xmlns:views="clr-namespace:asagiv.UI.gptAssistant.OpenSilver.Views"
              mc:Ignorable="d">
 
-    <DockPanel>
+    <Grid>
 
-        <DockPanel DockPanel.Dock="Bottom"
-                   Height="150">
+        <views:ChatView DataContext="{Binding ChatViewModel}" />
 
-            <cc:AsagivButton Margin="10"
-                             MinWidth="150"
-                             Content="Submit"
-                             DockPanel.Dock="Right"
-                             Command="{Binding SubmitCommand}"/>
-
-            <cc:AsagivTextBox x:Name="PromptTextBox"
-                              Margin="10"
-                              TextWrapping="Wrap"
-                              TextAlignment="Left"
-                              LabelText="Enter Prompt Here"
-                              Text="{Binding RequestString, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-
-        </DockPanel>
-
-        <Border Margin="10"
-                BorderBrush="#FF718597"
-                BorderThickness="1">
-
-            <ItemsControl Margin="10"
-                          ItemsSource="{Binding ChatHistory}">
-
-                <ItemsControl.ItemTemplate>
-
-                    <DataTemplate DataType="i:IGptChatItemViewModel">
-
-                        <TextBlock Text="{Binding DisplayValue}"
-                                   FontSize="16"
-                                   Margin="10"
-                                   TextWrapping="Wrap"/>
-
-                    </DataTemplate>
-
-                </ItemsControl.ItemTemplate>
-
-            </ItemsControl>
-
-        </Border>
-
-    </DockPanel>
+    </Grid>
 
 </UserControl>
