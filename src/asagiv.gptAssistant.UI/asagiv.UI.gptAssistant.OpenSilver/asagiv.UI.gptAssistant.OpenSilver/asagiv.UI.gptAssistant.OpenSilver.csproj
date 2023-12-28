@@ -44,7 +44,7 @@
 	  <ProjectReference Include="..\..\..\..\..\asagiv.common\src\asagiv.ui\asagiv.UI.OpenSilver\asagiv.UI.OpenSilver.csproj" />
 	  <ProjectReference Include="..\..\..\asagiv.gptAssistant.Application\asagiv.Appl.gptAssistant\asagiv.Appl.gptAssistant.csproj" />
 	  <ProjectReference Include="..\..\..\asagiv.gptAssistant.Domain\asagiv.Domain.gptAssistant\asagiv.Domain.gptAssistant.csproj" />
-	  <ProjectReference Include="..\..\..\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.Serialization\asagiv.Infrastructure.gptAssistant.Seralization.csproj" />
+	  <ProjectReference Include="..\..\..\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.Serialization\asagiv.Infrastructure.gptAssistant.Serialization.csproj" />
 	  <ProjectReference Include="..\..\..\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.Web\asagiv.Infrastructure.gptAssistant.Web.csproj" />
 	</ItemGroup>
 

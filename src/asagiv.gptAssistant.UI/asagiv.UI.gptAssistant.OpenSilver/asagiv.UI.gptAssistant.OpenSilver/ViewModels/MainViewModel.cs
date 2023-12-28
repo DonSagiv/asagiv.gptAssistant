@@ -81,7 +81,7 @@ namespace asagiv.UI.gptAssistant.OpenSilver.ViewModels
 
             var options = new HttpRequestProcessorOptions
             {
-                ApiKey = GetApiKey()
+                // ApiKey = GetApiKey()
             };
 
             var requestViewModel = new GptRequestViewModel(request)
@@ -105,12 +105,6 @@ namespace asagiv.UI.gptAssistant.OpenSilver.ViewModels
             }
 
             RequestString = string.Empty;
-        }
-
-        private string GetApiKey()
-        {
-            // todo: make secret before committing.
-            return "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";
         }
         #endregion
     }

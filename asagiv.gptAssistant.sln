@@ -37,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.Appl.gptAssistant", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.Domain.Core", "..\asagiv.common\src\asagiv.Domain\asagiv.Domain.Core\asagiv.Domain.Core.csproj", "{7C38BDED-A13E-4F80-9108-97A988ADD3EC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.Infrastructure.gptAssistant.Seralization", "src\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.Serialization\asagiv.Infrastructure.gptAssistant.Seralization.csproj", "{E3DB8446-71B5-4376-ABBD-4417F61BBFCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.Infrastructure.gptAssistant.Serialization", "src\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.Serialization\asagiv.Infrastructure.gptAssistant.Serialization.csproj", "{E3DB8446-71B5-4376-ABBD-4417F61BBFCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

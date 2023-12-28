@@ -14,7 +14,10 @@ namespace asagiv.UI.gptAssistant.OpenSilver.Browser
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("#app");
 
-            builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            builder.Services.AddTransient(sp => new HttpClient
+            {
+                BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
+            });
 
             var host = builder.Build();
             await host.RunAsync();
@@ -24,7 +27,7 @@ namespace asagiv.UI.gptAssistant.OpenSilver.Browser
         {
             Application.RunApplication(() =>
             {
-                var app = new asagiv.UI.gptAssistant.OpenSilver.App();
+                var app = new OpenSilver.App();
             });
         }
     }
