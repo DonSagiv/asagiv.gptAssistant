@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.Serializatrion\asagiv.Infrastructure.gptAssistant.Serialization.csproj" />
+    <ProjectReference Include="..\..\..\src\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.Serialization\asagiv.Infrastructure.gptAssistant.Serialization.csproj" />
   </ItemGroup>
 
 </Project>

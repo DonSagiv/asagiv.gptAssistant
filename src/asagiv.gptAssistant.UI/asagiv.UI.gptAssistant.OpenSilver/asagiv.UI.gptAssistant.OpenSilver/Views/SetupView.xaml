@@ -12,6 +12,7 @@
                           Text="{Binding ApiKey, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
         <cc:AsagivButton Margin="100, 10"
+                         IsTabStop="False"
                          DockPanel.Dock="Bottom"
                          Content="OK" />
 
