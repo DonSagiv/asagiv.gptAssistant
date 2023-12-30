@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "asagiv.UI.gptAssistant.OpenSilver": {
-      "commandName": "Executable",
-      "executablePath": "cmd",
-      "commandLineArgs": "/c start \"\" \"http://www.opensilver.net/permalinks/wrong_startup_project.aspx\""
-    }
-  }
-}
