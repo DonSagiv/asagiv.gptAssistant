@@ -2,18 +2,44 @@
 
 <PageTitle>Home</PageTitle>
 
-<Layout>
+<Layout Clearfix>
 
-    <LayoutHeader>
-        Header
-    </LayoutHeader>
+    <LayoutHeader Fixed
+                   Background="Background.White"
+                   Style="height: 30px;">
+         Header
+     </LayoutHeader>
 
-    <LayoutContent>
-        Content
+     <LayoutContent Style="padding-top:30px">
+         @for (var i = 0; i < 60; i++)
+        {
+            <Div>
+                Content
+            </Div>
+        }
+
+        <Div>
+            End
+        </Div>
+
     </LayoutContent>
 
-    <LayoutFooter>
-        Footer
-    </LayoutFooter>
+    <LayoutFooter Fixed
+                   Background="Background.White">
 
-</Layout>
+         <Div Class="input-group"
+              Padding="Padding.Is3">
+
+             <MemoEdit Rows="3"
+                       Style="resize: none" />
+
+             <Button Color="Color.Primary"
+                     Size="Size.ExtraLarge">
+                 Submit
+             </Button>
+
+         </Div>
+
+     </LayoutFooter>
+
+ </Layout>
