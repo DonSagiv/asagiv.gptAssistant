@@ -35,8 +35,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.UI.gptAssistant.Web"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.UI.gptAssistant.Web.Client", "src\asagiv.gptAssistant.UI\asagiv.UI.gptAssistant.Web\asagiv.UI.gptAssistant.Web.Client\asagiv.UI.gptAssistant.Web.Client.csproj", "{4A6210E4-2657-4B90-8A9E-FA5B7982824F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asagiv.UI.gptAssistant", "src\asagiv.gptAssistant.UI\asagiv.UI.gptAssistant\asagiv.UI.gptAssistant.csproj", "{95CD7B3E-F9EF-4E15-8602-8ACD6BE9BAFD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,10 +77,6 @@ Global
 		{4A6210E4-2657-4B90-8A9E-FA5B7982824F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A6210E4-2657-4B90-8A9E-FA5B7982824F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A6210E4-2657-4B90-8A9E-FA5B7982824F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{95CD7B3E-F9EF-4E15-8602-8ACD6BE9BAFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95CD7B3E-F9EF-4E15-8602-8ACD6BE9BAFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{95CD7B3E-F9EF-4E15-8602-8ACD6BE9BAFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{95CD7B3E-F9EF-4E15-8602-8ACD6BE9BAFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,7 +96,6 @@ Global
 		{E3DB8446-71B5-4376-ABBD-4417F61BBFCF} = {8D59AA7F-AD25-4A5D-AC92-9BC417F3EBEE}
 		{E3C20238-0E0C-4503-AF6A-7296A7FFC861} = {BB3DD210-FF66-4E17-9FC3-DC40264018CF}
 		{4A6210E4-2657-4B90-8A9E-FA5B7982824F} = {BB3DD210-FF66-4E17-9FC3-DC40264018CF}
-		{95CD7B3E-F9EF-4E15-8602-8ACD6BE9BAFD} = {BB3DD210-FF66-4E17-9FC3-DC40264018CF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2257C8F-01F9-4A33-9BC4-BB8B66BCE654}

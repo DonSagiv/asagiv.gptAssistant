@@ -1,4 +1,5 @@
-﻿using asagiv.UI.gptAssistant.Interfaces;
+﻿using asagiv.Appl.gptAssistant.Interfaces;
+using asagiv.UI.gptAssistant.Interfaces;
 using ReactiveUI;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
@@ -12,7 +13,7 @@ namespace asagiv.UI.gptAssistant.Web.Client.ViewModels
         #endregion
 
         #region Properties
-        public ObservableCollection<string> PromptCollection { get; }
+        public ObservableCollection<IGptChatMessageViewModel> PromptCollection { get; }
         public string PromptText
         {
             get => _promptText;

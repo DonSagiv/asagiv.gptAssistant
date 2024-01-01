@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\asagiv.common\src\asagiv.Domain\asagiv.Domain.Core\asagiv.Domain.Core.csproj" />
-    <ProjectReference Include="..\..\asagiv.UI.gptAssistant\asagiv.UI.gptAssistant.csproj" />
+    <ProjectReference Include="..\..\..\asagiv.gptAssistant.Application\asagiv.Appl.gptAssistant\asagiv.Appl.gptAssistant.csproj" />
   </ItemGroup>
 
 </Project>
