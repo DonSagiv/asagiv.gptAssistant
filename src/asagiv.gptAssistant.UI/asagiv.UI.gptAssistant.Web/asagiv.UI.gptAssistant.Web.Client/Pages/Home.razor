@@ -1,5 +1,6 @@
 ﻿@using ReactiveUI.Blazor
 @using asagiv.UI.gptAssistant.Web.Client.ViewModels
+@inherits ReactiveComponentBase<HomeViewModel>
 
 @page "/"
 
@@ -26,7 +27,7 @@
 
          <Container Fluid>
 
-            @foreach(var promptItem in ViewModel.PromptCollection)
+            @foreach (var promptItem in ViewModel.PromptCollection)
             {
                 <Div>
                     @promptItem
@@ -43,27 +44,35 @@
                     Background="Background.Light"
                     Padding="Padding.Is3.OnY">
 
-             <Addons>
+             <Form>
 
-                 <Addon AddonType="AddonType.Body">
+                 <Addons>
 
-                     <MemoEdit Rows="3"
-                               Style="resize: none"
-                               @bind-Text="ViewModel.PromptText"/>
+                     <Addon AddonType="AddonType.Body">
 
-                 </Addon>
+                         <MemoEdit Rows="3"
+                                   Style="resize: none"
+                                   KeyDown="OnKeyDown"
+                                   @onkeydown:preventDefault="_preventDefault"
+                                   @bind-Text="ViewModel.PromptText" />
 
-                 <Addon AddonType="AddonType.End">
+                     </Addon>
 
-                     <Button Color="Color.Primary"
-                             Size="Size.ExtraLarge"
-                             Clicked="OnSubmit">
-                         Submit
-                     </Button>
+                     <Addon AddonType="AddonType.End">
 
-                 </Addon>
+                         <Button Color="Color.Primary"
+                                 Size="Size.ExtraLarge"
+                                 Type="ButtonType.Submit"
+                                 PreventDefaultOnSubmit
+                                 Clicked="OnSubmit">
+                             Submit
+                         </Button>
 
-             </Addons>
+                     </Addon>
+
+                 </Addons>
+
+             </Form>
 
          </Container>
 

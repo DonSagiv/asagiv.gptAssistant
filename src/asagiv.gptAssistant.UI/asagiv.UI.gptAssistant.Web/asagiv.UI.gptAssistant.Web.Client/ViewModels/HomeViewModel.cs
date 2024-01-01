@@ -37,6 +37,8 @@ namespace asagiv.UI.gptAssistant.Web.Client.ViewModels
         private void OnSubmit()
         {
             PromptCollection.Add((string)PromptText.Clone());
+
+            PromptText = string.Empty;
         }
         #endregion
     }

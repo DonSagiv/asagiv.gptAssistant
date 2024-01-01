@@ -1,13 +1,14 @@
 ﻿using asagiv.Domain.Core.DependencyInjection;
 using asagiv.UI.gptAssistant.Interfaces;
 using asagiv.UI.gptAssistant.Web.Client.ViewModels;
+using Microsoft.AspNetCore.Components.Web;
 
 namespace asagiv.UI.gptAssistant.Web.Client.Pages
 {
     public partial class Home
     {
-        #region Properties
-        public HomeViewModel ViewModel { get; }
+        #region Fields
+        private bool _preventDefault;
         #endregion
 
         #region Constructor
@@ -18,9 +19,30 @@ namespace asagiv.UI.gptAssistant.Web.Client.Pages
         #endregion
 
         #region Methods
-        public void OnSubmit()
+        private void OnSubmit()
         {
             ViewModel.OnSubmitCommand.Execute(null);
+        }
+
+        private void OnKeyDown(KeyboardEventArgs e)
+        {
+            if (e.Key == "Enter" &&
+                e.ShiftKey == false && 
+                e.CtrlKey == false &&
+                e.AltKey == false)
+            {
+                _preventDefault = true;
+
+                OnSubmit();
+            }
+        }
+
+        protected override void OnAfterRender(bool firstRender)
+        {
+            if (_preventDefault)
+            {
+                _preventDefault = false;
+            }
         }
         #endregion
     }
