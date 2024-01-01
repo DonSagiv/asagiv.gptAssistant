@@ -1,3 +1,6 @@
+using asagiv.Domain.Core.DependencyInjection;
+using asagiv.UI.gptAssistant.Interfaces;
+using asagiv.UI.gptAssistant.Web.Client.ViewModels;
 using asagiv.UI.gptAssistant.Web.Components;
 using Blazorise;
 using Blazorise.Bootstrap;
@@ -9,6 +12,11 @@ namespace asagiv.UI.gptAssistant.Web
     {
         public static void Main(string[] args)
         {
+            ComponentContainer.Container.Initialize(cb =>
+            {
+                cb.AddSingleton<IMainViewModel, HomeViewModel>();
+            });
+
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services

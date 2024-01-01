@@ -2,8 +2,16 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Blazorise;
 using Blazorise.Bootstrap;
 using Blazorise.Icons.FontAwesome;
+using asagiv.Domain.Core.DependencyInjection;
+using asagiv.UI.gptAssistant.Interfaces;
+using asagiv.UI.gptAssistant.Web.Client.ViewModels;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
+
+ComponentContainer.Container.Initialize(cb =>
+{
+    cb.AddSingleton<IMainViewModel, HomeViewModel>();
+});
 
 builder.Services
     .AddBlazorise(o =>

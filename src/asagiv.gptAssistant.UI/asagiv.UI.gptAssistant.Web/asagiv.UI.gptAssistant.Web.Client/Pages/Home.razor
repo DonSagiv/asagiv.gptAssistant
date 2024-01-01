@@ -1,45 +1,75 @@
-﻿@page "/"
+﻿@using ReactiveUI.Blazor
+@using asagiv.UI.gptAssistant.Web.Client.ViewModels
+
+@page "/"
 
 <PageTitle>Home</PageTitle>
 
-<Layout Clearfix>
+<Layout>
 
-    <LayoutHeader Fixed
-                   Background="Background.White"
-                   Style="height: 30px;">
-         Header
+    <LayoutHeader>
+
+        <Container Fluid
+                    Background="Background.Light"
+                    Padding=Padding.Is2.OnY>
+
+             <Div TextAlignment="TextAlignment.Center"
+                  TextSize="TextSize.Heading1">
+                 My Header
+             </Div>
+
+         </Container>
+
      </LayoutHeader>
 
-     <LayoutContent Style="padding-top:30px">
-         @for (var i = 0; i < 60; i++)
-        {
-            <Div>
-                Content
-            </Div>
-        }
+     <LayoutContent>
 
-        <Div>
-            End
-        </Div>
+         <Container Fluid>
+
+            @foreach(var promptItem in ViewModel.PromptCollection)
+            {
+                <Div>
+                    @promptItem
+                </Div>
+            }
+
+        </Container>
 
     </LayoutContent>
 
-    <LayoutFooter Fixed
-                   Background="Background.White">
+    <LayoutFooter Fixed>
 
-         <Div Class="input-group"
-              Padding="Padding.Is3">
+        <Container Fluid
+                    Background="Background.Light"
+                    Padding="Padding.Is3.OnY">
 
-             <MemoEdit Rows="3"
-                       Style="resize: none" />
+             <Addons>
 
-             <Button Color="Color.Primary"
-                     Size="Size.ExtraLarge">
-                 Submit
-             </Button>
+                 <Addon AddonType="AddonType.Body">
 
-         </Div>
+                     <MemoEdit Rows="3"
+                               Style="resize: none"
+                               @bind-Text="ViewModel.PromptText"/>
+
+                 </Addon>
+
+                 <Addon AddonType="AddonType.End">
+
+                     <Button Color="Color.Primary"
+                             Size="Size.ExtraLarge"
+                             Clicked="OnSubmit">
+                         Submit
+                     </Button>
+
+                 </Addon>
+
+             </Addons>
+
+         </Container>
 
      </LayoutFooter>
 
  </Layout>
+
+
+

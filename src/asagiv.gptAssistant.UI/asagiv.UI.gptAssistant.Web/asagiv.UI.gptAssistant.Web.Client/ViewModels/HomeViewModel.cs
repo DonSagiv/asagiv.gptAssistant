@@ -1,0 +1,43 @@
+﻿using asagiv.UI.gptAssistant.Interfaces;
+using ReactiveUI;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
+
+namespace asagiv.UI.gptAssistant.Web.Client.ViewModels
+{
+    public class HomeViewModel : ReactiveObject, IMainViewModel
+    {
+        #region Fields
+        private string _promptText;
+        #endregion
+
+        #region Properties
+        public ObservableCollection<string> PromptCollection { get; }
+        public string PromptText
+        {
+            get => _promptText;
+            set => this.RaiseAndSetIfChanged(ref _promptText, value);
+        }
+        #endregion
+
+        #region Commands
+        public ICommand OnSubmitCommand { get; }
+        #endregion
+
+        #region Constructor
+        public HomeViewModel()
+        {
+            PromptCollection = [];
+
+            OnSubmitCommand = ReactiveCommand.Create(OnSubmit);
+        }
+        #endregion
+
+        #region Methods
+        private void OnSubmit()
+        {
+            PromptCollection.Add((string)PromptText.Clone());
+        }
+        #endregion
+    }
+}
