@@ -36,7 +36,9 @@ namespace asagiv.UI.gptAssistant.Web.Client.ViewModels
         #region Methods
         private void OnSubmit()
         {
-            PromptCollection.Add((string)PromptText.Clone());
+            var promptToAdd = PromptText.ToString();
+
+            PromptCollection.Add(promptToAdd);
 
             PromptText = string.Empty;
         }

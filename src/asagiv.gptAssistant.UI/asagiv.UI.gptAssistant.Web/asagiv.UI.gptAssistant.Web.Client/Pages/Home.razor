@@ -29,9 +29,19 @@
 
             @foreach (var promptItem in ViewModel.PromptCollection)
             {
-                <Div>
-                    @promptItem
-                </Div>
+                @foreach (var line in promptItem.Split('\n'))
+                {
+                    @if (string.IsNullOrEmpty(line))
+                    {
+                        <br />
+                    }
+                    else
+                    {
+                        <Div>
+                            @line
+                        </Div>
+                    }
+                }
             }
 
         </Container>
@@ -63,7 +73,7 @@
                          <Button Color="Color.Primary"
                                  Size="Size.ExtraLarge"
                                  Type="ButtonType.Submit"
-                                 PreventDefaultOnSubmit
+                                PreventDefaultOnSubmit
                                  Clicked="OnSubmit">
                              Submit
                          </Button>
