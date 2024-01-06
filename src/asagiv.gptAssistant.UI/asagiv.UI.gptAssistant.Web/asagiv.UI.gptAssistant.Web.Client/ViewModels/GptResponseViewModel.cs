@@ -1,8 +1,6 @@
-﻿using asagiv.UI.gptAssistant.Interfaces;
+﻿using asagiv.Appl.gptAssistant.Interfaces;
 
 namespace asagiv.UI.gptAssistant.Web.Client.ViewModels
 {
-    public class GptResponseViewModel : GptChatMessageViewModelBase, IGptResponseViewModel
-    {
-    }
+    public class GptResponseViewModel : GptChatMessageViewModelBase, IGptResponseViewModel { }
 }

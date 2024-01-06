@@ -1,5 +1,4 @@
 ﻿using asagiv.Appl.gptAssistant.Interfaces;
-using asagiv.UI.gptAssistant.Interfaces;
 using ReactiveUI;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
@@ -37,7 +36,8 @@ namespace asagiv.UI.gptAssistant.Web.Client.ViewModels
         #region Methods
         private void OnSubmit()
         {
-            var promptToAdd = PromptText.ToString();
+            var promptToAdd = new GptRequestViewModel();
+            promptToAdd.SetRequest(PromptText.ToString());
 
             PromptCollection.Add(promptToAdd);
 

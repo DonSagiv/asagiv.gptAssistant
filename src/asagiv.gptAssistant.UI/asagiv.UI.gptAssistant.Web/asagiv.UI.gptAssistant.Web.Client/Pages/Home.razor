@@ -4,24 +4,9 @@
 
 @page "/"
 
-<PageTitle>Home</PageTitle>
+<PageTitle>GPT Assistant</PageTitle>
 
 <Layout>
-
-    <LayoutHeader>
-
-        <Container Fluid
-                    Background="Background.Light"
-                    Padding=Padding.Is2.OnY>
-
-             <Div TextAlignment="TextAlignment.Center"
-                  TextSize="TextSize.Heading1">
-                 My Header
-             </Div>
-
-         </Container>
-
-     </LayoutHeader>
 
      <LayoutContent>
 
@@ -29,7 +14,7 @@
 
             @foreach (var promptItem in ViewModel.PromptCollection)
             {
-                @foreach (var line in promptItem.Split('\n'))
+                @foreach (var line in promptItem.DisplayString.Split('\n'))
                 {
                     @if (string.IsNullOrEmpty(line))
                     {

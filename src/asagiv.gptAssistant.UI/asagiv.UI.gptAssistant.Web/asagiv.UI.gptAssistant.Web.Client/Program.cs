@@ -3,8 +3,8 @@ using Blazorise;
 using Blazorise.Bootstrap;
 using Blazorise.Icons.FontAwesome;
 using asagiv.Domain.Core.DependencyInjection;
-using asagiv.UI.gptAssistant.Interfaces;
 using asagiv.UI.gptAssistant.Web.Client.ViewModels;
+using asagiv.Appl.gptAssistant.Interfaces;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 

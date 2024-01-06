@@ -1,5 +1,5 @@
+using asagiv.Appl.gptAssistant.Interfaces;
 using asagiv.Domain.Core.DependencyInjection;
-using asagiv.UI.gptAssistant.Interfaces;
 using asagiv.UI.gptAssistant.Web.Client.ViewModels;
 using asagiv.UI.gptAssistant.Web.Components;
 using Blazorise;

@@ -1,6 +1,4 @@
-﻿using asagiv.Appl.gptAssistant.Interfaces;
-
-namespace asagiv.UI.gptAssistant.Interfaces
+﻿namespace asagiv.Appl.gptAssistant.Interfaces
 {
     public interface IGptResponseViewModel : IGptChatMessageViewModel { }
 }

@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\asagiv.gptAssistant.Application\asagiv.Appl.gptAssistant\asagiv.Appl.gptAssistant.csproj" />
     <ProjectReference Include="..\asagiv.UI.gptAssistant.Web.Client\asagiv.UI.gptAssistant.Web.Client.csproj" />
     <PackageReference Include="Blazorise.Bootstrap" Version="1.4.0" />
     <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.4.0" />
