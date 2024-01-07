@@ -4,6 +4,6 @@ namespace asagiv.Appl.gptAssistant.Interfaces
 {
     public interface IGptRequestBuilderService
     {
-        IGptRequestBuilder GetNew();
+        IGptRequestBuilder GetBuilder();
     }
 }

@@ -1,5 +1,7 @@
-﻿using System.Text;
+﻿using System.Collections.ObjectModel;
+using System.Text;
 using asagiv.Appl.gptAssistant.Interfaces;
+using asagiv.Domain.gptAssistant.Interfaces;
 
 namespace asagiv.UI.gptAssistant.Web.Client.ViewModels
 {
@@ -9,14 +11,22 @@ namespace asagiv.UI.gptAssistant.Web.Client.ViewModels
         private readonly StringBuilder _responseStringBuilder = new();
         #endregion
 
-        #region Methods
-        public async Task WriteResponseAsync(IEnumerable<string> responseEnumerable)
-        {
-            _responseStringBuilder.Clear();
+        #region Properties
+        public Queue<IGptResponse> Responses = [];
+        #endregion
 
-            foreach(var response in responseEnumerable)
+        #region Constructor
+
+        #endregion
+
+        #region Methods
+        public async Task AddResponse(IGptResponse gptResponse)
+        {
+            Responses.Enqueue(gptResponse);
+
+            foreach(var item in gptResponse.Choices)
             {
-                _responseStringBuilder.Append(response);
+                _responseStringBuilder.Append(item.Payload.Content);
 
                 DisplayString = _responseStringBuilder.ToString();
 

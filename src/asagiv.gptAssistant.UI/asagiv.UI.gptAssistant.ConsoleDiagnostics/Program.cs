@@ -17,7 +17,7 @@ namespace asagiv.UI.gptAssistant.ConsoleDiagnostics
 
             using(var httpRequestProcessor = ComponentContainer.Container.Build<IGptRequestProcessor>())
             {
-                var builder = builderService.GetNew();
+                var builder = builderService.GetBuilder();
 
                 var options = new HttpRequestProcessorOptions
                 {
