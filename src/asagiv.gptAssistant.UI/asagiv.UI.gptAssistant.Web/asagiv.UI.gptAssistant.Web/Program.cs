@@ -44,6 +44,8 @@ namespace asagiv.UI.gptAssistant.Web
                 app.UseHsts();
             }
 
+
+
             app.UseHttpsRedirection();
 
             app.UseStaticFiles();

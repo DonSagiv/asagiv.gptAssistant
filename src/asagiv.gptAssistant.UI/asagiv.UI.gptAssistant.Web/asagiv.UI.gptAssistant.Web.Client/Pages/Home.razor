@@ -8,25 +8,17 @@
 
 <Layout>
 
-     <LayoutContent>
+    <LayoutContent>
 
-         <Container Fluid>
+        <Container Fluid>
 
             @foreach (var promptItem in ViewModel.PromptCollection)
             {
-                @foreach (var line in promptItem.DisplayString.Split('\n'))
-                {
-                    @if (string.IsNullOrEmpty(line))
-                    {
-                        <br />
-                    }
-                    else
-                    {
-                        <Div>
-                            @line
-                        </Div>
-                    }
-                }
+                <Div>
+                    <Text>
+                        @promptItem.DisplayString
+                    </Text>
+                </Div>
             }
 
         </Container>

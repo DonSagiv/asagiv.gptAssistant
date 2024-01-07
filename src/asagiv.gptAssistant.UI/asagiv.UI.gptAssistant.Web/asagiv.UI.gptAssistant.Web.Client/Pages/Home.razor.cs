@@ -15,6 +15,9 @@ namespace asagiv.UI.gptAssistant.Web.Client.Pages
         public Home()
         {
             ViewModel = ComponentContainer.Container.Build<IMainViewModel>() as HomeViewModel;
+
+            ViewModel.StateChangedObservable
+                .Subscribe(x => StateHasChanged());
         }
         #endregion
 
@@ -27,7 +30,7 @@ namespace asagiv.UI.gptAssistant.Web.Client.Pages
         private void OnKeyDown(KeyboardEventArgs e)
         {
             if (e.Key == "Enter" &&
-                e.ShiftKey == false && 
+                e.ShiftKey == false &&
                 e.CtrlKey == false &&
                 e.AltKey == false)
             {

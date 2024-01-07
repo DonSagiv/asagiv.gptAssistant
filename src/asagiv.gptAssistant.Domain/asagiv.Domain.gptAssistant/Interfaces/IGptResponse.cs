@@ -1,6 +1,4 @@
-﻿using asagiv.Domain.gptAssistant.Models;
-
-namespace asagiv.Domain.gptAssistant.Interfaces
+﻿namespace asagiv.Domain.gptAssistant.Interfaces
 {
     public interface IGptResponse
     {
