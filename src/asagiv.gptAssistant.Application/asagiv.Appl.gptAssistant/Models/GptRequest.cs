@@ -1,7 +1,8 @@
-﻿using asagiv.Domain.gptAssistant.Enumerators;
+﻿using asagiv.Appl.gptAssistant.Interfaces;
+using asagiv.Domain.gptAssistant.Enumerators;
 using asagiv.Domain.gptAssistant.Interfaces;
 
-namespace asagiv.Domain.gptAssistant.Models
+namespace asagiv.Appl.gptAssistant.Models
 {
     internal class GptRequest : IGptRequest
     {

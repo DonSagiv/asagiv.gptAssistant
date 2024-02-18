@@ -1,4 +1,4 @@
-﻿using asagiv.Domain.gptAssistant.Interfaces;
+﻿using asagiv.Appl.gptAssistant.Interfaces;
 using System.Collections.Generic;
 using System.Net.Http;
 

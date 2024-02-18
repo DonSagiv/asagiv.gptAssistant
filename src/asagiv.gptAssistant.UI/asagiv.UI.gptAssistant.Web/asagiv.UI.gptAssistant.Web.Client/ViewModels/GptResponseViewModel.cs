@@ -1,7 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Text;
 using asagiv.Appl.gptAssistant.Interfaces;
-using asagiv.Domain.gptAssistant.Interfaces;
 
 namespace asagiv.UI.gptAssistant.Web.Client.ViewModels
 {

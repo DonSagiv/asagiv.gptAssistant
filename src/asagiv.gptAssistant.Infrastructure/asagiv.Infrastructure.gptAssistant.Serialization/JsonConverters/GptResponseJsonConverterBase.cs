@@ -1,6 +1,5 @@
 ﻿using asagiv.Appl.gptAssistant.Interfaces;
 using asagiv.Domain.Core.DependencyInjection;
-using asagiv.Domain.gptAssistant.Interfaces;
 using System.Text.Json.Nodes;
 
 namespace asagiv.Infrastructure.gptAssistant.Serialization.JsonConverters

@@ -1,9 +1,11 @@
-﻿using asagiv.Domain.Core.DependencyInjection;
+﻿using asagiv.Appl.gptAssistant.Interfaces;
+using asagiv.Domain.Core.DependencyInjection;
 using asagiv.Domain.gptAssistant.Interfaces;
+using asagiv.Domain.gptAssistant.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace asagiv.Domain.gptAssistant.Models
+namespace asagiv.Appl.gptAssistant.Models
 {
     [Export(typeof(IGptRequestBuilder), creationPolicy: CreationPolicy.Transient)]
     internal class GptRequestBuilder : IGptRequestBuilder

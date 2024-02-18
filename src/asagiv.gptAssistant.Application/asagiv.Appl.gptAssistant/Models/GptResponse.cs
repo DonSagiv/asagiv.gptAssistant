@@ -1,8 +1,9 @@
-﻿using asagiv.Domain.Core.DependencyInjection;
+﻿using asagiv.Appl.gptAssistant.Interfaces;
+using asagiv.Domain.Core.DependencyInjection;
 using asagiv.Domain.gptAssistant.Interfaces;
 using System.Linq;
 
-namespace asagiv.Domain.gptAssistant.Models
+namespace asagiv.Appl.gptAssistant.Models
 {
     [Export(typeof(IGptResponse), creationPolicy: CreationPolicy.Transient)]
     internal class GptResponse : IGptResponse

@@ -1,5 +1,4 @@
 ﻿using asagiv.Appl.gptAssistant.Interfaces;
-using asagiv.Domain.gptAssistant.Interfaces;
 using ReactiveUI;
 
 namespace asagiv.UI.gptAssistant.Web.Client.ViewModels

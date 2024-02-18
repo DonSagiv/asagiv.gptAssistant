@@ -1,5 +1,4 @@
-﻿using asagiv.Domain.gptAssistant.Interfaces;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace asagiv.Appl.gptAssistant.Interfaces
 {
