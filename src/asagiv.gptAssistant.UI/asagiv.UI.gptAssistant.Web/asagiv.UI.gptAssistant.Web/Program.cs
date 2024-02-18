@@ -1,5 +1,6 @@
 using asagiv.Appl.gptAssistant.Interfaces;
 using asagiv.Domain.Core.DependencyInjection;
+using asagiv.Infrastructure.gptAssistant.Web.Models;
 using asagiv.UI.gptAssistant.Web.Client.ViewModels;
 using asagiv.UI.gptAssistant.Web.Components;
 using Blazorise;
@@ -9,8 +10,9 @@ using Blazorise.Icons.FontAwesome;
 ComponentContainer.Container.Initialize(cb =>
 {
     cb.AddSingleton<IMainViewModel, HomeViewModel>();
-
+    
     cb.AddTransient<IGptRequestViewModel, GptRequestViewModel>();
+    cb.AddTransient<IGptRequestAuthenticationService, GptAuthetnicationRetriever>();
 });
 
 var builder = WebApplication.CreateBuilder(args);

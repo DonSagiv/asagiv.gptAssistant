@@ -2,6 +2,7 @@
 using MediatR;
 using ReactiveUI;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
 using System.Windows.Input;
@@ -9,19 +10,22 @@ using Unit = System.Reactive.Unit;
 
 namespace asagiv.UI.gptAssistant.Web.Client.ViewModels;
 
-public class HomeViewModel : ReactiveObject, IMainViewModel
+public class HomeViewModel(IGptRequestBuilderService requestBuilderServiceInput,
+    IGptRequestViewModelService requestViewModelServiceInput,
+    IMediator medaitor)
+    : ReactiveObject, IMainViewModel
 {
     #region Fields
     private readonly Subject<Unit> _stateChangedSubject = new();
-    private readonly IGptRequestBuilderService _requestBuilderService;
-    private readonly IGptRequestViewModelService _requestViewModelService;
-    private readonly IMediator _mediator;
+    private readonly IGptRequestBuilderService _requestBuilderService = requestBuilderServiceInput;
+    private readonly IGptRequestViewModelService _requestViewModelService = requestViewModelServiceInput;
+    private readonly IMediator _mediator = medaitor;
 
     private string _promptText;
     #endregion
 
     #region Properties
-    public ObservableCollection<IGptChatMessageViewModel> PromptCollection { get; }
+    public ObservableCollection<IGptChatMessageViewModel> PromptCollection { get; } = [];
     public string PromptText
     {
         get => _promptText;
@@ -32,25 +36,13 @@ public class HomeViewModel : ReactiveObject, IMainViewModel
 
     #region Commands
     public ICommand OnSubmitCommand { get; }
+
     #endregion
-
     #region Constructor
-    public HomeViewModel(IGptRequestBuilderService requestBuilderServiceInput,
-        IGptRequestViewModelService requestViewModelServiceInput,
-        IMediator medaitor)
-    {
-        _requestBuilderService = requestBuilderServiceInput;
-        _requestViewModelService = requestViewModelServiceInput;
-        _mediator = medaitor;
-
-        PromptCollection = [];
-
-        OnSubmitCommand = ReactiveCommand.CreateFromTask(OnSubmitAsync);
-    }
     #endregion
 
     #region Methods
-    private async Task OnSubmitAsync()
+    public async Task OnSubmitAsync()
     {
         // Create and add the GPT Request.
         var requestBuilder = _requestBuilderService.GetBuilder();
@@ -64,8 +56,15 @@ public class HomeViewModel : ReactiveObject, IMainViewModel
 
         PromptCollection.Add(requestViewModel);
 
-        // Process the request.
-        var responses = await _mediator.Send(request);
+        try
+        {
+            // Process the request.
+            var responses = await _mediator.Send(request);
+        }
+        catch(Exception ex)
+        {
+            Debug.WriteLine(ex);
+        }
     }
     #endregion
 }

@@ -64,7 +64,7 @@ namespace asagiv.Appl.gptAssistant.Models
             return this;
         }
 
-        public IGptRequest Build()
+        public GptRequest Build()
         {
             var request = new GptRequest()
             {

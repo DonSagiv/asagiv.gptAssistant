@@ -1,4 +1,5 @@
 ﻿using asagiv.Appl.gptAssistant.Interfaces;
+using asagiv.Appl.gptAssistant.Models;
 using ReactiveUI;
 
 namespace asagiv.UI.gptAssistant.Web.Client.ViewModels
@@ -6,11 +7,11 @@ namespace asagiv.UI.gptAssistant.Web.Client.ViewModels
     public class GptRequestViewModel : GptChatMessageViewModelBase, IGptRequestViewModel
     {
         #region Fields
-        private IGptRequest _gptRequest;
+        private GptRequest _gptRequest;
         #endregion
 
         #region Properties
-        public IGptRequest GptRequest 
+        public GptRequest GptRequest 
         {
             get => _gptRequest;
             set => this.RaiseAndSetIfChanged(ref _gptRequest, value);
@@ -26,7 +27,7 @@ namespace asagiv.UI.gptAssistant.Web.Client.ViewModels
         #endregion
 
         #region Method
-        private void OnGptRequestChanged(IGptRequest gptRequestInput)
+        private void OnGptRequestChanged(GptRequest gptRequestInput)
         {
             if(gptRequestInput == null)
             {

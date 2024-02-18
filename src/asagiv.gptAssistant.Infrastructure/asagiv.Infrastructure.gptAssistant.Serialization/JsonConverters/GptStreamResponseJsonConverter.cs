@@ -1,4 +1,5 @@
 ﻿using asagiv.Appl.gptAssistant.Interfaces;
+using asagiv.Appl.gptAssistant.Models;
 using asagiv.Domain.Core.DependencyInjection;
 using asagiv.Domain.gptAssistant.Enumerators;
 using asagiv.Domain.gptAssistant.Interfaces;
@@ -37,7 +38,7 @@ namespace asagiv.Infrastructure.gptAssistant.Serialization.JsonConverters
             return true;
         }
 
-        protected override void ParseResponsePayload(IGptResponse response, JsonNode jNode)
+        protected override void ParseResponsePayload(GptResponse response, JsonNode jNode)
         {
             var choices = jNode["choices"]
                 .AsArray()

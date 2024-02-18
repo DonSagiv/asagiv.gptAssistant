@@ -22,12 +22,12 @@ namespace asagiv.UI.gptAssistant.Web.Client.Pages
         #endregion
 
         #region Methods
-        private void OnSubmit()
+        private async Task OnSubmitAsync()
         {
-            ViewModel.OnSubmitCommand.Execute(null);
+            await ViewModel.OnSubmitAsync();
         }
 
-        private void OnKeyDown(KeyboardEventArgs e)
+        private Task OnKeyDownAsync(KeyboardEventArgs e)
         {
             if (e.Key == "Enter" &&
                 e.ShiftKey == false &&
@@ -36,8 +36,10 @@ namespace asagiv.UI.gptAssistant.Web.Client.Pages
             {
                 _preventDefault = true;
 
-                OnSubmit();
+                return OnSubmitAsync();
             }
+
+            return Task.CompletedTask;
         }
 
         protected override void OnAfterRender(bool firstRender)

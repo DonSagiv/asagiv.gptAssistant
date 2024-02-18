@@ -1,7 +1,9 @@
-﻿namespace asagiv.Appl.gptAssistant.Interfaces
+﻿using asagiv.Appl.gptAssistant.Models;
+
+namespace asagiv.Appl.gptAssistant.Interfaces
 {
     public interface IGptRequestViewModel : IGptChatMessageViewModel 
     {
-        IGptRequest GptRequest { get; set; }
+        GptRequest GptRequest { get; set; }
     }
 }

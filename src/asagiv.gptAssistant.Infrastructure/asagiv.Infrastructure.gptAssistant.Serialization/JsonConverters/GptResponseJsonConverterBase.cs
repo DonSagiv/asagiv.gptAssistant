@@ -1,4 +1,5 @@
 ﻿using asagiv.Appl.gptAssistant.Interfaces;
+using asagiv.Appl.gptAssistant.Models;
 using asagiv.Domain.Core.DependencyInjection;
 using System.Text.Json.Nodes;
 
@@ -7,7 +8,7 @@ namespace asagiv.Infrastructure.gptAssistant.Serialization.JsonConverters
     internal abstract class GptResponseJsonConverterBase : IGptResponseParser
     {
         #region Methods
-        public IGptResponse ParseResponse(string jsonString)
+        public GptResponse ParseResponse(string jsonString)
         {
             if (!IsValidJsonString(jsonString, out var modifiedJsonString))
             {
@@ -15,7 +16,7 @@ namespace asagiv.Infrastructure.gptAssistant.Serialization.JsonConverters
             }
 
             var jNode = JsonNode.Parse(modifiedJsonString);
-            var response = ComponentContainer.Container.Build<IGptResponse>();
+            var response = ComponentContainer.Container.Build<GptResponse>();
 
             ParseResponseMetadata(response, jNode);
             ParseResponsePayload(response, jNode);
@@ -25,7 +26,7 @@ namespace asagiv.Infrastructure.gptAssistant.Serialization.JsonConverters
         #endregion
 
         #region Virtual Methods
-        protected virtual void ParseResponseMetadata(IGptResponse response, JsonNode jNode)
+        protected virtual void ParseResponseMetadata(GptResponse response, JsonNode jNode)
         {
             response.Id = jNode["id"]?.GetValue<string>();
             response.ObjectType = jNode["object"]?.GetValue<string>();
@@ -35,7 +36,7 @@ namespace asagiv.Infrastructure.gptAssistant.Serialization.JsonConverters
         }
 
         protected abstract bool IsValidJsonString(string jsonString, out string modifiedJsonString);
-        protected abstract void ParseResponsePayload(IGptResponse response, JsonNode jNode);
+        protected abstract void ParseResponsePayload(GptResponse response, JsonNode jNode);
         #endregion
     }
 }

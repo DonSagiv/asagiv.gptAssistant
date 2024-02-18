@@ -1,4 +1,6 @@
-﻿namespace asagiv.Appl.gptAssistant.Interfaces
+﻿using asagiv.Appl.gptAssistant.Models;
+
+namespace asagiv.Appl.gptAssistant.Interfaces
 {
     public interface IGptRequestBuilder
     {
@@ -6,6 +8,6 @@
         IGptRequestBuilder WithSystemMessage(string systemContent);
         IGptRequestBuilder WithUserMessage(string userContent);
         IGptRequestBuilder UseStream();
-        IGptRequest Build();
+        GptRequest Build();
     }
 }

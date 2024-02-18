@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Text;
 using asagiv.Appl.gptAssistant.Interfaces;
+using asagiv.Appl.gptAssistant.Models;
 
 namespace asagiv.UI.gptAssistant.Web.Client.ViewModels
 {
@@ -11,7 +12,7 @@ namespace asagiv.UI.gptAssistant.Web.Client.ViewModels
         #endregion
 
         #region Properties
-        public Queue<IGptResponse> Responses = [];
+        public Queue<GptResponse> Responses = [];
         #endregion
 
         #region Constructor
@@ -19,7 +20,7 @@ namespace asagiv.UI.gptAssistant.Web.Client.ViewModels
         #endregion
 
         #region Methods
-        public async Task AddResponse(IGptResponse gptResponse)
+        public async Task AddResponse(GptResponse gptResponse)
         {
             Responses.Enqueue(gptResponse);
 

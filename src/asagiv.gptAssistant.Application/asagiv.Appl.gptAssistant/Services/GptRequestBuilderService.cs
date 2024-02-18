@@ -4,7 +4,7 @@ using asagiv.Domain.Core.DependencyInjection;
 namespace asagiv.Appl.gptAssistant.Services
 {
     [Export(typeof(IGptRequestBuilderService), creationPolicy: CreationPolicy.Singleton)]
-    public class GptRequestBuilderService : IGptRequestBuilderService
+    internal class GptRequestBuilderService : IGptRequestBuilderService
     {
         public IGptRequestBuilder GetBuilder()
         {

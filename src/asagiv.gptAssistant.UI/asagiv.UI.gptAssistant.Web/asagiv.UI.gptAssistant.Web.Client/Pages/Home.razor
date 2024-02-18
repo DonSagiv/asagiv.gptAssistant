@@ -39,7 +39,7 @@
 
                          <MemoEdit Rows="3"
                                    Style="resize: none"
-                                   KeyDown="OnKeyDown"
+                                   KeyDown="OnKeyDownAsync"
                                    @onkeydown:preventDefault="_preventDefault"
                                    @bind-Text="ViewModel.PromptText" />
 
@@ -50,8 +50,8 @@
                          <Button Color="Color.Primary"
                                  Size="Size.ExtraLarge"
                                  Type="ButtonType.Submit"
-                                PreventDefaultOnSubmit
-                                 Clicked="OnSubmit">
+                                 PreventDefaultOnSubmit
+                                 Clicked="OnSubmitAsync">
                              Submit
                          </Button>
 

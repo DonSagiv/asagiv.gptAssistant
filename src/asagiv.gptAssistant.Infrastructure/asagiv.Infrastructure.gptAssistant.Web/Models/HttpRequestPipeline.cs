@@ -1,4 +1,5 @@
 ﻿using asagiv.Appl.gptAssistant.Interfaces;
+using asagiv.Appl.gptAssistant.Models;
 using System.Collections.Generic;
 using System.Net.Http;
 
@@ -7,8 +8,8 @@ namespace asagiv.Infrastructure.gptAssistant.Web.Models
     internal class HttpRequestPipeline
     {
         #region Properties
-        public IList<IGptResponse> Responses { get; }
-        public IGptRequest GptRequest { get; set; }
+        public IList<GptResponse> Responses { get; }
+        public GptRequest GptRequest { get; set; }
         public HttpRequestProcessorOptions Options { get; set; }
         public HttpResponseMessage HttpResponse { get; set; }
         public string ErrorMessage { get; set; }
@@ -18,17 +19,17 @@ namespace asagiv.Infrastructure.gptAssistant.Web.Models
         #region Constructor
         public HttpRequestPipeline()
         {
-            Responses = new List<IGptResponse>();
+            Responses = new List<GptResponse>();
         }
         #endregion
 
         #region Methods
-        public void AppendResponse(IGptResponse response)
+        public void AppendResponse(GptResponse response)
         {
             Responses.Add(response);
         }
 
-        public IEnumerable<IGptResponse> GetResponses()
+        public IEnumerable<GptResponse> GetResponses()
         {
             return Responses;
         }

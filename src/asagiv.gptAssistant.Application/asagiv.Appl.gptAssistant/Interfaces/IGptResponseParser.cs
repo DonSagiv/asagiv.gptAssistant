@@ -1,7 +1,9 @@
-﻿namespace asagiv.Appl.gptAssistant.Interfaces
+﻿using asagiv.Appl.gptAssistant.Models;
+
+namespace asagiv.Appl.gptAssistant.Interfaces
 {
     public interface IGptResponseParser
     {
-        IGptResponse ParseResponse(string input);
+        GptResponse ParseResponse(string input);
     }
 }

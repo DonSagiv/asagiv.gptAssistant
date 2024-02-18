@@ -1,4 +1,5 @@
 using asagiv.Appl.gptAssistant.Interfaces;
+using asagiv.Appl.gptAssistant.Models;
 using asagiv.Domain.Core.DependencyInjection;
 using asagiv.Domain.gptAssistant.Enumerators;
 
@@ -74,7 +75,7 @@ public class SerializerTesting
             var parserFactory = ComponentContainer.Container.Build<IGptResponseParserFactory>();
             var parser = parserFactory.OfResponseType(ResponseDeliveryMethod.Stream);
 
-            var responses = new List<IGptResponse>();
+            var responses = new List<GptResponse>();
 
             foreach (var responseString in responseStrings)
             {

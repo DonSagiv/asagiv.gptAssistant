@@ -1,4 +1,6 @@
 ﻿using asagiv.Appl.gptAssistant.Interfaces;
+using asagiv.Appl.gptAssistant.Models;
+using asagiv.Domain.Core.DependencyInjection;
 using asagiv.Domain.gptAssistant.Enumerators;
 using MediatR;
 using System;
@@ -13,10 +15,9 @@ using System.Threading.Tasks;
 
 namespace asagiv.Infrastructure.gptAssistant.Web.Models;
 
-public class HttpGptRequestHandler(IGptRequestSerializer requestSerializerInput,
-    IGptResponseParserFactory responseParserFactoryInput,
-    IGptRequestAuthenticationService authenticationService)
-    : IRequestHandler<IGptRequest, IEnumerable<IGptResponse>>
+public class HttpGptRequestHandler(IGptRequestSerializer requestSerializer,
+    IGptResponseParserFactory responseParserFactory,
+    IGptRequestAuthenticationService authenticationService) : IRequestHandler<GptRequest, List<GptResponse>>
 {
     #region Statics
     // todo: make settings/environemnt variables.
@@ -24,13 +25,13 @@ public class HttpGptRequestHandler(IGptRequestSerializer requestSerializerInput,
     #endregion
 
     #region Fields
-    private readonly IGptRequestSerializer _requestSerializer = requestSerializerInput;
-    private readonly IGptResponseParserFactory _responseFactoryParser = responseParserFactoryInput;
+    private readonly IGptRequestSerializer _requestSerializer = requestSerializer;
+    private readonly IGptResponseParserFactory _responseFactoryParser = responseParserFactory;
     private readonly IGptRequestAuthenticationService _authenticationService = authenticationService;
     #endregion
-
+    
     #region Methods
-    public async Task<IEnumerable<IGptResponse>> Handle(IGptRequest request, CancellationToken cancellationToken)
+    public async Task<List<GptResponse>> Handle(GptRequest request, CancellationToken cancellationToken)
     {
         /*
         var options = new HttpRequestProcessorOptions
@@ -49,10 +50,10 @@ public class HttpGptRequestHandler(IGptRequestSerializer requestSerializerInput,
 
         var responses = ParseResponseAsync(request, httpResponse);
 
-        return await responses.ToArrayAsync(cancellationToken);
+        return await responses.ToListAsync(cancellationToken);
     }
 
-    private async Task<HttpResponseMessage> SendRequestAsync(IGptRequest request, HttpRequestProcessorOptions options = null)
+    private async Task<HttpResponseMessage> SendRequestAsync(GptRequest request, HttpRequestProcessorOptions options = null)
     {
         using var httpClient = new HttpClient() { BaseAddress = new Uri(url) };
 
@@ -67,7 +68,7 @@ public class HttpGptRequestHandler(IGptRequestSerializer requestSerializerInput,
         return await httpClient.PostAsync("chat/completions", content);
     }
 
-    private IAsyncEnumerable<IGptResponse> ParseResponseAsync(IGptRequest request, HttpResponseMessage httpResponse)
+    private IAsyncEnumerable<GptResponse> ParseResponseAsync(GptRequest request, HttpResponseMessage httpResponse)
     {
         var deliveryMethod = request.GetRequestDeliveryMechanism();
 
@@ -81,7 +82,7 @@ public class HttpGptRequestHandler(IGptRequestSerializer requestSerializerInput,
         }
     }
 
-    private async IAsyncEnumerable<IGptResponse> ProcessStreamAsync(HttpResponseMessage httpResponse, ResponseDeliveryMethod deliveryMethod)
+    private async IAsyncEnumerable<GptResponse> ProcessStreamAsync(HttpResponseMessage httpResponse, ResponseDeliveryMethod deliveryMethod)
     {
         using var stream = await httpResponse.Content.ReadAsStreamAsync();
         using var streamReader = new StreamReader(stream);
@@ -94,14 +95,14 @@ public class HttpGptRequestHandler(IGptRequestSerializer requestSerializerInput,
         }
     }
 
-    private async IAsyncEnumerable<IGptResponse> ProcessSingleResponseAsync(HttpResponseMessage httpResponse, ResponseDeliveryMethod deliveryMethod)
+    private async IAsyncEnumerable<GptResponse> ProcessSingleResponseAsync(HttpResponseMessage httpResponse, ResponseDeliveryMethod deliveryMethod)
     {
         var responseString = await httpResponse.Content.ReadAsStringAsync();
 
         yield return await ProcessResponseAsync(deliveryMethod, responseString);
     }
 
-    private Task<IGptResponse> ProcessResponseAsync(ResponseDeliveryMethod responseType, string streamResponse)
+    private Task<GptResponse> ProcessResponseAsync(ResponseDeliveryMethod responseType, string streamResponse)
     {
         var parser = _responseFactoryParser.OfResponseType(responseType);
 
