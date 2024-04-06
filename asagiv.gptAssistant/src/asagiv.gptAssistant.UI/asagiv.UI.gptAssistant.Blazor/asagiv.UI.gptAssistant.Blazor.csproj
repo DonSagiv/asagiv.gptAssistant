@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\asagiv.common\src\asagiv.Domain\asagiv.Domain.Core\asagiv.Domain.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\..\asagiv.common\src\asagiv.Infrastructure\asagiv.Infrastructure.Logging.Serilog\asagiv.Infrastructure.Logging.Serilog.csproj" />
+  </ItemGroup>
+
+</Project>
