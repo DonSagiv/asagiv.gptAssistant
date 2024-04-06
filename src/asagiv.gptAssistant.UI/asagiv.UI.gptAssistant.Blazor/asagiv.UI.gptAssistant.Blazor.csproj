@@ -7,12 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="asagiv.Appl.Core" Version="0.0.0.4" />
+    <PackageReference Include="asagiv.Domain.Core" Version="0.0.0.4" />
+    <PackageReference Include="asagiv.Infrastructure.Logging.Serilog" Version="0.0.0.4" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="9.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\asagiv.common\src\asagiv.Domain\asagiv.Domain.Core\asagiv.Domain.Core.csproj" />
-    <ProjectReference Include="..\..\..\..\..\asagiv.common\src\asagiv.Infrastructure\asagiv.Infrastructure.Logging.Serilog\asagiv.Infrastructure.Logging.Serilog.csproj" />
   </ItemGroup>
 
 </Project>

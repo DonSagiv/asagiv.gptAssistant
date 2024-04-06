@@ -1,10 +1,19 @@
-using asagiv.gptAssistant.Components;
+using asagiv.Domain.Core.DependencyInjection;
+using asagiv.Domain.Core.Extensions;
+using asagiv.UI.gptAssistant.Blazor.Components;
+using Autofac.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory(cb =>
+{
+    ComponentContainer.Container.AddAttributedTypes(cb);
+    cb.AddMediatR();
+}));
 
 var app = builder.Build();
 
