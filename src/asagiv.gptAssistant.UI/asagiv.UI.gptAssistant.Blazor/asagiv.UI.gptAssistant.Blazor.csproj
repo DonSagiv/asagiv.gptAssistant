@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="asagiv.Appl.Core" Version="0.0.0.4" />
-    <PackageReference Include="asagiv.Domain.Core" Version="0.0.0.4" />
-    <PackageReference Include="asagiv.Infrastructure.Logging.Serilog" Version="0.0.0.4" />
+    <PackageReference Include="asagiv.Appl.Core" Version="0.0.0.5" />
+    <PackageReference Include="asagiv.Domain.Core" Version="0.0.0.5" />
+    <PackageReference Include="asagiv.Infrastructure.Logging.Serilog" Version="0.0.0.5" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="9.0.0" />
   </ItemGroup>
 

@@ -396,4 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Custom Ignored Items
 /test/asagiv.gptAssistant.Infrastructure.Tests/RedisTestParameters.cs

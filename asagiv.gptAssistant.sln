@@ -13,7 +13,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "asagiv.gptAssistant.Domain"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "asagiv.gptAssistant.Appl", "asagiv.gptAssistant.Appl", "{1920C7BD-869E-4D06-BF84-2D9A15F2C49A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asagiv.UI.gptAssistant.Blazor", "src\asagiv.gptAssistant.UI\asagiv.UI.gptAssistant.Blazor\asagiv.UI.gptAssistant.Blazor.csproj", "{539E8B9B-F49C-4A5A-8756-CE111DA1CE68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.UI.gptAssistant.Blazor", "src\asagiv.gptAssistant.UI\asagiv.UI.gptAssistant.Blazor\asagiv.UI.gptAssistant.Blazor.csproj", "{539E8B9B-F49C-4A5A-8756-CE111DA1CE68}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.Domain.gptAssistant", "src\asagiv.gptAssistant.Domain\asagiv.Domain.gptAssistant\asagiv.Domain.gptAssistant.csproj", "{38B0E521-E55E-4D24-98D5-BD9A02A06DA0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.Appl.gptAssistant", "src\asagiv.gptAssistant.Appl\asagiv.Appl.gptAssistant\asagiv.Appl.gptAssistant.csproj", "{50094252-8C82-44DD-B536-128F57FF4BEC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asagiv.Infrastructure.gptAssistant", "src\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant\asagiv.Infrastructure.gptAssistant.csproj", "{60B40395-6348-418C-AC10-BB542FAF798A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asagiv.Infrastructure.gptAssistant.OpenAi", "src\asagiv.gptAssistant.Infrastructure\asagiv.Infrastructure.gptAssistant.OpenAi\asagiv.Infrastructure.gptAssistant.OpenAi.csproj", "{FC9395F0-CB07-4155-B80C-A463B7F48C6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{5274C305-108C-4D29-8371-2EC438527269}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asagiv.gptAssistant.Infrastructure.Tests", "test\asagiv.gptAssistant.Infrastructure.Tests\asagiv.gptAssistant.Infrastructure.Tests.csproj", "{BF5E59EE-F602-43C6-AC20-A7AFD83BF1AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +37,26 @@ Global
 		{539E8B9B-F49C-4A5A-8756-CE111DA1CE68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{539E8B9B-F49C-4A5A-8756-CE111DA1CE68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{539E8B9B-F49C-4A5A-8756-CE111DA1CE68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38B0E521-E55E-4D24-98D5-BD9A02A06DA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38B0E521-E55E-4D24-98D5-BD9A02A06DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38B0E521-E55E-4D24-98D5-BD9A02A06DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38B0E521-E55E-4D24-98D5-BD9A02A06DA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50094252-8C82-44DD-B536-128F57FF4BEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50094252-8C82-44DD-B536-128F57FF4BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50094252-8C82-44DD-B536-128F57FF4BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50094252-8C82-44DD-B536-128F57FF4BEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60B40395-6348-418C-AC10-BB542FAF798A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60B40395-6348-418C-AC10-BB542FAF798A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60B40395-6348-418C-AC10-BB542FAF798A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60B40395-6348-418C-AC10-BB542FAF798A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC9395F0-CB07-4155-B80C-A463B7F48C6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC9395F0-CB07-4155-B80C-A463B7F48C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC9395F0-CB07-4155-B80C-A463B7F48C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC9395F0-CB07-4155-B80C-A463B7F48C6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF5E59EE-F602-43C6-AC20-A7AFD83BF1AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF5E59EE-F602-43C6-AC20-A7AFD83BF1AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF5E59EE-F602-43C6-AC20-A7AFD83BF1AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF5E59EE-F602-43C6-AC20-A7AFD83BF1AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -35,6 +67,11 @@ Global
 		{46677608-A29C-4C29-BAAE-BCB646508D98} = {B0C6A214-F4F2-4262-B45B-AE12FFF33B25}
 		{1920C7BD-869E-4D06-BF84-2D9A15F2C49A} = {B0C6A214-F4F2-4262-B45B-AE12FFF33B25}
 		{539E8B9B-F49C-4A5A-8756-CE111DA1CE68} = {BD360AAF-5DD2-4538-9EBB-4ED01484ED0E}
+		{38B0E521-E55E-4D24-98D5-BD9A02A06DA0} = {46677608-A29C-4C29-BAAE-BCB646508D98}
+		{50094252-8C82-44DD-B536-128F57FF4BEC} = {1920C7BD-869E-4D06-BF84-2D9A15F2C49A}
+		{60B40395-6348-418C-AC10-BB542FAF798A} = {3323EA81-ED75-4961-BF26-8D1976DDDC70}
+		{FC9395F0-CB07-4155-B80C-A463B7F48C6D} = {3323EA81-ED75-4961-BF26-8D1976DDDC70}
+		{BF5E59EE-F602-43C6-AC20-A7AFD83BF1AD} = {5274C305-108C-4D29-8371-2EC438527269}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A1634247-AE16-4FD6-8582-EBE00066656F}
